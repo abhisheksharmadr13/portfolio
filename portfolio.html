@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Performance Marketer Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d0d0d;
+    --bg2: #161616;
+    --bg3: #1f1f1f;
+    --text: #f0ede6;
+    --muted: #888880;
+    --accent: #d4e87a;
+    --accent2: #7ab8e8;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.65;
+    min-height: 100vh;
+  }
+
+  .portfolio {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px 100px;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0 20px;
+    border-bottom: 0.5px solid var(--border);
+    margin-bottom: 64px;
+    position: sticky;
+    top: 0;
+    background: rgba(13,13,13,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 100;
+  }
+
+  .nav-logo {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  /* ── HERO ── */
+  .hero { margin-bottom: 72px; }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(212,232,122,0.1);
+    border: 0.5px solid rgba(212,232,122,0.3);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 24px;
+    font-family: var(--font-body);
+  }
+
+  .hero-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-tag { animation: fadeUp 0.5s ease both; }
+  h1 { animation: fadeUp 0.5s 0.1s ease both; }
+  .hero-sub { animation: fadeUp 0.5s 0.2s ease both; }
+  .hero-actions { animation: fadeUp 0.5s 0.3s ease both; }
+
+  h1 {
+    font-family: var(--font-head);
+    font-size: clamp(38px, 6vw, 62px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  h1 span { color: var(--accent); }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 520px;
+    line-height: 1.75;
+    margin-bottom: 32px;
+  }
+
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #0d0d0d;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 0.5px solid var(--border2);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-outline:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
+
+  /* ── STATS ── */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 80px;
+  }
+
+  .stat {
+    background: var(--bg2);
+    padding: 28px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: var(--font-head);
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.03em;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .section-tag {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 0.5px;
+    background: var(--border);
+  }
+
+  /* ── CASE CARDS ── */
+  .cases-grid { display: grid; gap: 16px; margin-bottom: 80px; }
+
+  .case-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 32px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .case-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .case-card:hover { border-color: var(--border2); background: var(--bg3); }
+  .case-card:hover::before { opacity: 1; }
+  .case-card.active { border-color: rgba(212,232,122,0.3); background: var(--bg3); }
+  .case-card.active::before { opacity: 1; }
+
+  .case-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    gap: 12px;
+  }
+
+  .case-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .pill {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 0.5px solid var(--border2);
+    color: var(--muted);
+  }
+
+  .pill.channel {
+    color: var(--accent2);
+    border-color: rgba(122,184,232,0.3);
+    background: rgba(122,184,232,0.06);
+  }
+
+  .case-title {
+    font-family: var(--font-head);
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+
+  .case-brief {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 22px;
+    line-height: 1.65;
+  }
+
+  .case-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .metric {
+    background: var(--bg);
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+
+  .metric-val {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    letter-spacing: -0.02em;
+  }
+
+  .metric-label { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+  .expand-btn {
+    font-size: 11px;
+    color: var(--muted);
+    background: none;
+    border: 0.5px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .expand-btn:hover { color: var(--text); border-color: var(--border2); }
+
+  .case-detail {
+    display: none;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .case-detail.open { display: block; }
+
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  .detail-block h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .detail-block p { font-size: 13px; color: var(--text); line-height: 1.65; }
+
+  /* ── SKILLS ── */
+  .skills-section { margin-bottom: 80px; }
+
+  .channels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .channel-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    transition: border-color 0.2s;
+  }
+
+  .channel-card:hover { border-color: var(--border2); }
+
+  .channel-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    margin-bottom: 14px;
+    font-weight: 800;
+    font-family: var(--font-head);
+  }
+
+  .channel-icon.g { background: rgba(234,90,64,0.15); color: #ea5a40; }
+  .channel-icon.m { background: rgba(24,119,242,0.15); color: #5b9cf6; }
+  .channel-icon.li { background: rgba(10,102,194,0.15); color: #5b9cf6; }
+
+  .channel-name {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .channel-skills { font-size: 12px; color: var(--muted); line-height: 1.65; }
+
+  .tools-label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  .tools-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .tool-tag {
+    font-size: 12px;
+    padding: 5px 12px;
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 6px;
+    color: var(--muted);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .tool-tag:hover { color: var(--text); border-color: var(--border2); }
+
+  /* ── CERTS ── */
+  .certs-section { margin-bottom: 80px; }
+
+  .certs-row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+  .cert-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    color: var(--text);
+    transition: border-color 0.2s;
+  }
+
+  .cert-chip:hover { border-color: var(--border2); }
+
+  .cert-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section { margin-bottom: 80px; }
+
+  .testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .testi-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  .testi-quote {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  .testi-quote::before { content: '"'; color: var(--accent); font-size: 20px; font-style: normal; }
+  .testi-quote::after { content: '"'; color: var(--accent); font-size: 20px; font-style: normal; }
+
+  .testi-author { font-size: 12px; color: var(--muted); }
+  .testi-author strong { color: var(--text); font-weight: 500; display: block; margin-bottom: 2px; }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+  }
+
+  .contact-section h2 {
+    font-family: var(--font-head);
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+
+  .contact-section p { color: var(--muted); font-size: 15px; margin-bottom: 32px; }
+
+  .contact-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 40px 0 0;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 0.5px solid var(--border);
+    margin-top: 64px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .stats-bar { grid-template-columns: 1fr; }
+    .channels-grid { grid-template-columns: 1fr 1fr; }
+    .case-metrics { grid-template-columns: 1fr 1fr; }
+    .detail-grid { grid-template-columns: 1fr; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .contact-section { padding: 32px 24px; }
+    h1 { font-size: 36px; }
+  }
+
+  @media (max-width: 400px) {
+    .channels-grid { grid-template-columns: 1fr; }
+    .case-metrics { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="portfolio">
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">YourName.io</a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <div class="hero-tag">Open to new opportunities</div>
+    <h1>Performance<br>Marketer &amp;<br><span>Growth Driver</span></h1>
+    <p class="hero-sub">4 years turning ad spend into measurable revenue — across Google, Meta, and LinkedIn. I build full-funnel campaigns that scale without burning budget.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn-primary">View case studies</a>
+      <a href="#contact" class="btn-outline">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-number">$4M+</span>
+      <span class="stat-label">Ad spend managed</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">3.8x</span>
+      <span class="stat-label">Average ROAS</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">40+</span>
+      <span class="stat-label">Campaigns launched</span>
+    </div>
+  </div>
+
+  <!-- CASE STUDIES -->
+  <section id="work">
+    <div class="cases-grid">
+      <div class="section-header">
+        <span class="section-tag">Case studies</span>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Case 1 -->
+      <div class="case-card" onclick="toggleCase(this)">
+        <div class="case-top">
+          <div class="case-meta">
+            <span class="pill">E-commerce</span>
+            <span class="pill channel">Google Ads</span>
+            <span class="pill channel">Meta Ads</span>
+          </div>
+          <button class="expand-btn">View details ↓</button>
+        </div>
+        <div class="case-title">Scaled DTC brand from $30K to $180K/mo in 6 months</div>
+        <div class="case-brief">A consumer skincare brand needed to break past a revenue plateau. Rebuilt campaign architecture from scratch — new audience structure, creative testing framework, and bid strategy overhaul.</div>
+        <div class="case-metrics">
+          <div class="metric"><span class="metric-val">4.6x</span><span class="metric-label">ROAS achieved</span></div>
+          <div class="metric"><span class="metric-val">−38%</span><span class="metric-label">CPA reduction</span></div>
+          <div class="metric"><span class="metric-val">6x</span><span class="metric-label">Revenue growth</span></div>
+        </div>
+        <div class="case-detail">
+          <div class="detail-grid">
+            <div class="detail-block">
+              <h4>Challenge</h4>
+              <p>Brand had strong organic presence but paid was unprofitable. ROAS sat at 1.2x with rising CPMs and no systematic testing process.</p>
+            </div>
+            <div class="detail-block">
+              <h4>Strategy</h4>
+              <p>Rebuilt Meta using broad + Advantage+ hybrid. Google restructured into Performance Max with custom audience signals from CRM data.</p>
+            </div>
+            <div class="detail-block">
+              <h4>Execution</h4>
+              <p>Launched weekly creative sprints — 3 concepts tested per week. Built a Looker Studio dashboard tracking blended ROAS daily.</p>
+            </div>
+            <div class="detail-block">
+              <h4>Outcome</h4>
+              <p>Achieved 4.6x ROAS at $180K/mo spend. CPA dropped 38% in 90 days. Brand scaled to a new market the following quarter.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="case-card" onclick="toggleCase(this)">
+        <div class="case-top">
+          <div class="case-meta">
+            <span class="pill">B2B SaaS</span>
+            <span class="pill channel">LinkedIn Ads</span>
+            <span class="pill channel">Google Ads</span>
+          </div>
+          <button class="expand-btn">View details ↓</button>
+        </div>
+        <div class="case-title">Reduced B2B SaaS CPL by 52% through LinkedIn restructure</div>
+        <div class="case-brief">A Series A SaaS company was generating leads at $280 CPL on LinkedIn — far above their $130 target. Diagnosed targeting inefficiencies and rebuilt the entire funnel.</div>
+        <div class="case-metrics">
+          <div class="metric"><span class="metric-val">−52%</span><span class="metric-label">CPL drop</span></div>
+          <div class="metric"><span class="metric-val">3.1x</span><span class="metric-label">Pipeline ROI</span></div>
+          <div class="metric"><span class="metric-val">$134</span><span class="metric-label">Final CPL</span></div>
+        </div>
+        <div class="case-detail">
+          <div class="detail-grid">
+            <div class="detail-block">
+              <h4>Challenge</h4>
+              <p>Campaign targeting overlapping audiences, leading to high frequency and wasted spend. Lead form quality was also poor — sales rejected 60% of leads.</p>
+            </div>
+            <div class="detail-block">
+              <h4>Strategy</h4>
+              <p>Segmented ICP tightly by company size and seniority. Introduced Matched Audiences from CRM. Built mid-funnel retargeting with case study content.</p>
+            </div>
+            <div class="detail-block">
+              <h4>Execution</h4>
+              <p>Created 3 audience tiers: cold, warm, hot. Each tier had distinct messaging and offers — awareness, demo request, free trial respectively.</p>
+            </div>
+            <div class="detail-block">
+              <h4>Outcome</h4>
+              <p>CPL reduced to $134 in 45 days. Lead quality improved — sales acceptance rose from 40% to 74%. Pipeline value delivered 3.1x ROI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="case-card" onclick="toggleCase(this)">
+        <div class="case-top">
+          <div class="case-meta">
+            <span class="pill">Lead Gen</span>
+            <span class="pill channel">Google Ads</span>
+          </div>
+          <button class="expand-btn">View details ↓</button>
+        </div>
+        <div class="case-title">Google Search overhaul — 2.4x conversions, same budget</div>
+        <div class="case-brief">A financial services brand had untouched Google campaigns running on broad match keywords. A deep account audit revealed massive inefficiencies and quality score issues.</div>
+        <div class="case-metrics">
+          <div class="metric"><span class="metric-val">2.4x</span><span class="metric-label">Conversions</span></div>
+          <div class="metric"><span class="metric-val">+61%</span><span class="metric-label">Quality score</span></div>
+          <div class="metric"><span class="metric-val">−29%</span><span class="metric-label">Wasted spend</span></div>
+        </div>
+        <div class="case-detail">
+          <div class="detail-grid">
+            <div class="detail-block">
+              <h4>Challenge</h4>
+              <p>Account had 800+ keywords with no negative keyword strategy. 34% of spend going to irrelevant search terms. Landing pages mismatched to ad intent.</p>
+            </div>
+            <div class="detail-block">
+              <h4>Strategy</h4>
+              <p>SKAG structure replaced with tightly themed ad groups. Built 400+ negative keyword list. Created dedicated landing pages per campaign theme.</p>
+            </div>
+            <div class="detail-block">
+              <h4>Execution</h4>
+              <p>8-week restructure: weeks 1–2 audit, weeks 3–5 rebuild, weeks 6–8 optimisation sprint. A/B tested landing pages using Google Optimize.</p>
+            </div>
+            <div class="detail-block">
+              <h4>Outcome</h4>
+              <p>Conversions 2.4x with same budget. Average Quality Score up from 4.1 to 6.6. Wasted spend cut 29% through negative keyword expansion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-section" id="skills">
+    <div class="section-header">
+      <span class="section-tag">Skills &amp; channels</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="channels-grid">
+      <div class="channel-card">
+        <div class="channel-icon g">G</div>
+        <div class="channel-name">Google Ads</div>
+        <div class="channel-skills">Search, Shopping, Performance Max, Display, YouTube, SKAG/STAG, Smart Bidding, Negative Keywords</div>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon m">f</div>
+        <div class="channel-name">Meta Ads</div>
+        <div class="channel-skills">Advantage+, Retargeting, Lookalike Audiences, Creative Testing, CAPI, Catalog Ads, Lead Gen</div>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon li">in</div>
+        <div class="channel-name">LinkedIn Ads</div>
+        <div class="channel-skills">Matched Audiences, Lead Gen Forms, Sponsored Content, Account-Based Marketing, ICP Targeting</div>
+      </div>
+    </div>
+
+    <div class="tools-label">Tools &amp; platforms</div>
+    <div class="tools-row">
+      <span class="tool-tag">GA4</span>
+      <span class="tool-tag">Looker Studio</span>
+      <span class="tool-tag">HubSpot</span>
+      <span class="tool-tag">Klaviyo</span>
+      <span class="tool-tag">Semrush</span>
+      <span class="tool-tag">Hotjar</span>
+      <span class="tool-tag">Triple Whale</span>
+      <span class="tool-tag">Unbounce</span>
+      <span class="tool-tag">Notion</span>
+      <span class="tool-tag">Google Tag Manager</span>
+      <span class="tool-tag">Zapier</span>
+      <span class="tool-tag">Google Optimize</span>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="certs-section">
+    <div class="section-header">
+      <span class="section-tag">Certifications</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="certs-row">
+      <div class="cert-chip"><div class="cert-dot" style="background:#ea5a40;"></div>Google Ads Certified</div>
+      <div class="cert-chip"><div class="cert-dot" style="background:#5b9cf6;"></div>Meta Blueprint</div>
+      <div class="cert-chip"><div class="cert-dot" style="background:#5b9cf6;"></div>LinkedIn Marketing Labs</div>
+      <div class="cert-chip"><div class="cert-dot" style="background:#d4e87a;"></div>Google Analytics 4</div>
+      <div class="cert-chip"><div class="cert-dot" style="background:#ff7a59;"></div>HubSpot Marketing</div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="section-header">
+      <span class="section-tag">Testimonials</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote">Completely transformed our paid strategy. Results were visible within the first month — ROAS doubled and our CPL hit targets we'd never reached before.</div>
+        <div class="testi-author">
+          <strong>Priya Sharma</strong>
+          Head of Marketing, SaaS Company
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">One of the sharpest performance marketers I've worked with. Data-driven, fast to execute, and always focused on business outcomes — not just ad metrics.</div>
+        <div class="testi-author">
+          <strong>Rahul Mehta</strong>
+          Founder, D2C Brand
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <h2>Let's work together</h2>
+    <p>Open to full-time roles, freelance projects, and consulting engagements.<br>I typically respond within 24 hours.</p>
+    <div class="contact-links">
+      <a href="mailto:you@email.com" class="btn-primary">Send an email</a>
+      <a href="https://linkedin.com/in/yourprofile" class="btn-outline" target="_blank">LinkedIn profile</a>
+      <a href="https://calendly.com/yourlink" class="btn-outline" target="_blank">Book a call</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built with HTML &amp; CSS · Hosted free on GitHub Pages · &copy; 2026 Your Name</p>
+  </footer>
+
+</div>
+
+<script>
+  function toggleCase(card) {
+    const detail = card.querySelector('.case-detail');
+    const btn = card.querySelector('.expand-btn');
+    const isOpen = detail.classList.contains('open');
+    document.querySelectorAll('.case-detail').forEach(d => d.classList.remove('open'));
+    document.querySelectorAll('.case-card').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.expand-btn').forEach(b => b.textContent = 'View details ↓');
+    if (!isOpen) {
+      detail.classList.add('open');
+      card.classList.add('active');
+      btn.textContent = 'Hide details ↑';
+    }
+  }
+</script>
+</body>
+</html>
