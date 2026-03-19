@@ -3,809 +3,348 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name — Performance Marketer Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<title>Abhishek Sharma | Performance Marketer</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #0d0d0d;
-    --bg2: #161616;
-    --bg3: #1f1f1f;
-    --text: #f0ede6;
-    --muted: #888880;
-    --accent: #d4e87a;
-    --accent2: #7ab8e8;
-    --border: rgba(255,255,255,0.08);
-    --border2: rgba(255,255,255,0.14);
-    --font-head: 'Syne', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-body);
-    font-size: 15px;
-    line-height: 1.65;
-    min-height: 100vh;
-  }
-
-  .portfolio {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 24px 100px;
-  }
-
-  /* ── NAV ── */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px 0 20px;
-    border-bottom: 0.5px solid var(--border);
-    margin-bottom: 64px;
-    position: sticky;
-    top: 0;
-    background: rgba(13,13,13,0.92);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 100;
-  }
-
-  .nav-logo {
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    text-decoration: none;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 13px;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--text); }
-
-  /* ── HERO ── */
-  .hero { margin-bottom: 72px; }
-
-  .hero-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(212,232,122,0.1);
-    border: 0.5px solid rgba(212,232,122,0.3);
-    border-radius: 20px;
-    padding: 4px 14px;
-    font-size: 12px;
-    color: var(--accent);
-    margin-bottom: 24px;
-    font-family: var(--font-body);
-  }
-
-  .hero-tag::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .hero-tag { animation: fadeUp 0.5s ease both; }
-  h1 { animation: fadeUp 0.5s 0.1s ease both; }
-  .hero-sub { animation: fadeUp 0.5s 0.2s ease both; }
-  .hero-actions { animation: fadeUp 0.5s 0.3s ease both; }
-
-  h1 {
-    font-family: var(--font-head);
-    font-size: clamp(38px, 6vw, 62px);
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    margin-bottom: 20px;
-    color: var(--text);
-  }
-
-  h1 span { color: var(--accent); }
-
-  .hero-sub {
-    font-size: 16px;
-    color: var(--muted);
-    max-width: 520px;
-    line-height: 1.75;
-    margin-bottom: 32px;
-  }
-
-  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-
-  .btn-primary {
-    background: var(--accent);
-    color: #0d0d0d;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: opacity 0.2s, transform 0.15s;
-  }
-
-  .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--text);
-    border: 0.5px solid var(--border2);
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-family: var(--font-body);
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: border-color 0.2s, background 0.2s;
-  }
-
-  .btn-outline:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
-
-  /* ── STATS ── */
-  .stats-bar {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 0.5px solid var(--border);
-    border-radius: 14px;
-    overflow: hidden;
-    margin-bottom: 80px;
-  }
-
-  .stat {
-    background: var(--bg2);
-    padding: 28px;
-    text-align: center;
-  }
-
-  .stat-number {
-    font-family: var(--font-head);
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--accent);
-    letter-spacing: -0.03em;
-    display: block;
-  }
-
-  .stat-label {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 4px;
-  }
-
-  /* ── SECTION HEADER ── */
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 28px;
-  }
-
-  .section-tag {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    white-space: nowrap;
-  }
-
-  .section-line {
-    flex: 1;
-    height: 0.5px;
-    background: var(--border);
-  }
-
-  /* ── CASE CARDS ── */
-  .cases-grid { display: grid; gap: 16px; margin-bottom: 80px; }
-
-  .case-card {
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 14px;
-    padding: 28px 32px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .case-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--accent);
-    opacity: 0;
-    transition: opacity 0.25s;
-  }
-
-  .case-card:hover { border-color: var(--border2); background: var(--bg3); }
-  .case-card:hover::before { opacity: 1; }
-  .case-card.active { border-color: rgba(212,232,122,0.3); background: var(--bg3); }
-  .case-card.active::before { opacity: 1; }
-
-  .case-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 16px;
-    gap: 12px;
-  }
-
-  .case-meta { display: flex; gap: 8px; flex-wrap: wrap; }
-
-  .pill {
-    font-size: 11px;
-    padding: 3px 10px;
-    border-radius: 20px;
-    border: 0.5px solid var(--border2);
-    color: var(--muted);
-  }
-
-  .pill.channel {
-    color: var(--accent2);
-    border-color: rgba(122,184,232,0.3);
-    background: rgba(122,184,232,0.06);
-  }
-
-  .case-title {
-    font-family: var(--font-head);
-    font-size: 19px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 10px;
-    line-height: 1.25;
-  }
-
-  .case-brief {
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 22px;
-    line-height: 1.65;
-  }
-
-  .case-metrics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-  }
-
-  .metric {
-    background: var(--bg);
-    border: 0.5px solid var(--border);
-    border-radius: 10px;
-    padding: 14px 16px;
-  }
-
-  .metric-val {
-    font-family: var(--font-head);
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--accent);
-    display: block;
-    letter-spacing: -0.02em;
-  }
-
-  .metric-label { font-size: 11px; color: var(--muted); margin-top: 3px; }
-
-  .expand-btn {
-    font-size: 11px;
-    color: var(--muted);
-    background: none;
-    border: 0.5px solid var(--border);
-    border-radius: 6px;
-    padding: 5px 12px;
-    cursor: pointer;
-    font-family: var(--font-body);
-    transition: color 0.2s, border-color 0.2s;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  .expand-btn:hover { color: var(--text); border-color: var(--border2); }
-
-  .case-detail {
-    display: none;
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 0.5px solid var(--border);
-  }
-
-  .case-detail.open { display: block; }
-
-  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-
-  .detail-block h4 {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    margin-bottom: 8px;
-    font-weight: 500;
-  }
-
-  .detail-block p { font-size: 13px; color: var(--text); line-height: 1.65; }
-
-  /* ── SKILLS ── */
-  .skills-section { margin-bottom: 80px; }
-
-  .channels-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 28px;
-  }
-
-  .channel-card {
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 12px;
-    padding: 22px;
-    transition: border-color 0.2s;
-  }
-
-  .channel-card:hover { border-color: var(--border2); }
-
-  .channel-icon {
-    width: 38px;
-    height: 38px;
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    margin-bottom: 14px;
-    font-weight: 800;
-    font-family: var(--font-head);
-  }
-
-  .channel-icon.g { background: rgba(234,90,64,0.15); color: #ea5a40; }
-  .channel-icon.m { background: rgba(24,119,242,0.15); color: #5b9cf6; }
-  .channel-icon.li { background: rgba(10,102,194,0.15); color: #5b9cf6; }
-
-  .channel-name {
-    font-family: var(--font-head);
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-
-  .channel-skills { font-size: 12px; color: var(--muted); line-height: 1.65; }
-
-  .tools-label {
-    font-size: 11px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 12px;
-  }
-
-  .tools-row { display: flex; flex-wrap: wrap; gap: 8px; }
-
-  .tool-tag {
-    font-size: 12px;
-    padding: 5px 12px;
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 6px;
-    color: var(--muted);
-    transition: color 0.2s, border-color 0.2s;
-  }
-
-  .tool-tag:hover { color: var(--text); border-color: var(--border2); }
-
-  /* ── CERTS ── */
-  .certs-section { margin-bottom: 80px; }
-
-  .certs-row { display: flex; gap: 10px; flex-wrap: wrap; }
-
-  .cert-chip {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 16px;
-    font-size: 13px;
-    color: var(--text);
-    transition: border-color 0.2s;
-  }
-
-  .cert-chip:hover { border-color: var(--border2); }
-
-  .cert-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-
-  /* ── TESTIMONIALS ── */
-  .testimonials-section { margin-bottom: 80px; }
-
-  .testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-  .testi-card {
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-  }
-
-  .testi-quote {
-    font-size: 14px;
-    color: var(--text);
-    line-height: 1.7;
-    margin-bottom: 16px;
-    font-style: italic;
-    opacity: 0.85;
-  }
-
-  .testi-quote::before { content: '"'; color: var(--accent); font-size: 20px; font-style: normal; }
-  .testi-quote::after { content: '"'; color: var(--accent); font-size: 20px; font-style: normal; }
-
-  .testi-author { font-size: 12px; color: var(--muted); }
-  .testi-author strong { color: var(--text); font-weight: 500; display: block; margin-bottom: 2px; }
-
-  /* ── CONTACT ── */
-  .contact-section {
-    background: var(--bg2);
-    border: 0.5px solid var(--border);
-    border-radius: 16px;
-    padding: 48px 40px;
-    text-align: center;
-  }
-
-  .contact-section h2 {
-    font-family: var(--font-head);
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 10px;
-  }
-
-  .contact-section p { color: var(--muted); font-size: 15px; margin-bottom: 32px; }
-
-  .contact-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-
-  /* ── FOOTER ── */
-  footer {
-    text-align: center;
-    padding: 40px 0 0;
-    font-size: 12px;
-    color: var(--muted);
-    border-top: 0.5px solid var(--border);
-    margin-top: 64px;
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 640px) {
-    .stats-bar { grid-template-columns: 1fr; }
-    .channels-grid { grid-template-columns: 1fr 1fr; }
-    .case-metrics { grid-template-columns: 1fr 1fr; }
-    .detail-grid { grid-template-columns: 1fr; }
-    .testi-grid { grid-template-columns: 1fr; }
-    .contact-section { padding: 32px 24px; }
-    h1 { font-size: 36px; }
-  }
-
-  @media (max-width: 400px) {
-    .channels-grid { grid-template-columns: 1fr; }
-    .case-metrics { grid-template-columns: 1fr; }
-  }
+/* ============================================
+   HOW TO EDIT (NO CODING NEEDED):
+   Open in Notepad → Ctrl+F → search text → replace → save → upload to GitHub
+   ============================================ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--bg4:#30363d;
+  --text:#e6edf3;--muted:#7d8590;--muted2:#484f58;
+  --accent:#58a6ff;--green:#3fb950;--orange:#d29922;--purple:#bc8cff;
+  --border:#30363d;--border2:#3d444d;
+  --font-h:'Syne',sans-serif;--font-b:'DM Sans',sans-serif;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font-b);font-size:15px;line-height:1.65}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px 80px}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:48px;position:sticky;top:0;background:rgba(13,17,23,0.96);backdrop-filter:blur(8px);z-index:100}
+.nav-brand{display:flex;align-items:center;gap:10px;font-family:var(--font-h);font-weight:700;font-size:15px;color:var(--text)}
+.avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#58a6ff,#bc8cff);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;font-family:var(--font-h)}
+.nav-links{display:flex;gap:4px;list-style:none}
+.nav-links a{color:var(--muted);font-size:13px;padding:6px 12px;border-radius:6px;transition:all .15s;text-decoration:none}
+.nav-links a:hover{color:var(--text);background:var(--bg3)}
+
+.hero{margin-bottom:48px;padding-top:8px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.3);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--green);margin-bottom:20px}
+.bdot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:var(--font-h);font-size:clamp(30px,5vw,50px);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;color:var(--text)}
+.ca{color:var(--accent)}.cg{color:var(--green)}
+.hero-desc{font-size:15px;color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:28px}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:6px;font-size:14px;font-family:var(--font-b);font-weight:500;cursor:pointer;transition:all .15s;text-decoration:none;border:1px solid transparent}
+.btn-p{background:var(--green);color:#0d1117;border-color:var(--green)}
+.btn-p:hover{background:#3aa84a;text-decoration:none}
+.btn-s{background:var(--bg3);color:var(--text);border-color:var(--border2)}
+.btn-s:hover{background:var(--bg4);text-decoration:none}
+
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:48px;background:var(--bg2)}
+.stat-item{padding:20px 14px;text-align:center;border-right:1px solid var(--border)}
+.stat-item:last-child{border-right:none}
+.snum{font-family:var(--font-h);font-size:24px;font-weight:800;letter-spacing:-.02em;display:block}
+.snum.a{color:var(--accent)}.snum.g{color:var(--green)}.snum.o{color:var(--orange)}.snum.p{color:var(--purple)}
+.slbl{font-size:11px;color:var(--muted);margin-top:3px}
+
+.section{margin-bottom:48px}
+.sec-title{display:flex;align-items:center;gap:10px;font-family:var(--font-h);font-size:18px;font-weight:700;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);color:var(--text)}
+.sec-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px}
+.ib{background:rgba(88,166,255,.15)}.ig{background:rgba(63,185,80,.15)}.io{background:rgba(210,153,34,.15)}.ip{background:rgba(188,140,255,.15)}
+
+.case-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:22px;margin-bottom:12px;cursor:pointer;transition:border-color .2s;position:relative;overflow:hidden}
+.case-card:hover{border-color:var(--border2)}
+.case-card.open{border-color:var(--accent)}
+.case-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);opacity:0;transition:opacity .2s}
+.case-card.open::before{opacity:1}
+.case-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11px;padding:2px 8px;border-radius:20px;border:1px solid}
+.tb{color:var(--accent);border-color:rgba(88,166,255,.3);background:rgba(88,166,255,.08)}
+.tg{color:var(--green);border-color:rgba(63,185,80,.3);background:rgba(63,185,80,.08)}
+.to{color:var(--orange);border-color:rgba(210,153,34,.3);background:rgba(210,153,34,.08)}
+.tp{color:var(--purple);border-color:rgba(188,140,255,.3);background:rgba(188,140,255,.08)}
+.tgr{color:var(--muted);border-color:var(--border);background:var(--bg3)}
+.tog{font-size:11px;color:var(--muted);background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;white-space:nowrap;font-family:var(--font-b);transition:all .15s;flex-shrink:0}
+.tog:hover{color:var(--text);border-color:var(--border2)}
+.ctitle{font-family:var(--font-h);font-size:17px;font-weight:700;margin-bottom:6px;line-height:1.3}
+.cdesc{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6}
+.mrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mbox{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px}
+.mval{font-family:var(--font-h);font-size:20px;font-weight:700;color:var(--green);display:block;letter-spacing:-.02em}
+.mval.b{color:var(--accent)}.mval.o{color:var(--orange)}
+.mlbl{font-size:11px;color:var(--muted);margin-top:2px}
+.cdetail{display:none;margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}
+.cdetail.open{display:block}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dbox{background:var(--bg3);border-radius:8px;padding:14px}
+.dbox h4{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;font-weight:500}
+.dbox p{font-size:13px;color:var(--text);line-height:1.6}
+
+.cligrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.clicard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;display:flex;align-items:center;gap:10px;transition:border-color .15s}
+.clicard:hover{border-color:var(--border2)}
+.cdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.cname{font-size:13px;font-weight:500;color:var(--text)}
+.cloc{font-size:11px;color:var(--muted)}
+
+.chgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.chcard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:18px;transition:border-color .15s}
+.chcard:hover{border-color:var(--border2)}
+.chlogo{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-weight:700;font-size:13px;margin-bottom:10px}
+.lg{background:rgba(234,90,64,.15);color:#ea5a40}
+.lm{background:rgba(24,119,242,.15);color:#1877f2}
+.ll{background:rgba(10,102,194,.15);color:#0a66c2}
+.chname{font-size:14px;font-weight:500;margin-bottom:6px}
+.chsk{font-size:12px;color:var(--muted);line-height:1.6}
+.tools{display:flex;flex-wrap:wrap;gap:8px}
+.tool{font-size:12px;padding:4px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--muted)}
+
+.certwrap{display:flex;flex-wrap:wrap;gap:10px}
+.cert{display:flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:13px}
+.certdot{width:8px;height:8px;border-radius:50%}
+
+.contact-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:36px;text-align:center}
+.contact-box h2{font-family:var(--font-h);font-size:24px;font-weight:700;margin-bottom:8px}
+.contact-box p{color:var(--muted);font-size:14px;margin-bottom:24px}
+.cbtns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.cinfo{display:flex;justify-content:center;gap:24px;margin-top:18px;flex-wrap:wrap}
+.cinfo span,.cinfo a{font-size:13px;color:var(--muted)}
+.cinfo a{color:var(--accent)}
+
+@media(max-width:600px){
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .cligrid{grid-template-columns:repeat(2,1fr)}
+  .chgrid{grid-template-columns:1fr 1fr}
+  .mrow{grid-template-columns:1fr 1fr}
+  .dgrid{grid-template-columns:1fr}
+  .nav-links{display:none}
+}
 </style>
 </head>
 <body>
-<div class="portfolio">
+<div class="wrap">
 
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">YourName.io</a>
-    <ul class="nav-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav>
+  <div class="nav-brand">
+    <div class="avatar">AS</div>
+    Abhishek Sharma
+  </div>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero" id="about">
-    <div class="hero-tag">Open to new opportunities</div>
-    <h1>Performance<br>Marketer &amp;<br><span>Growth Driver</span></h1>
-    <p class="hero-sub">4 years turning ad spend into measurable revenue — across Google, Meta, and LinkedIn. I build full-funnel campaigns that scale without burning budget.</p>
-    <div class="hero-actions">
-      <a href="#work" class="btn-primary">View case studies</a>
-      <a href="#contact" class="btn-outline">Get in touch</a>
-    </div>
-  </section>
+<section class="hero">
+  <div class="hero-badge"><div class="bdot"></div>Available for new projects</div>
+  <h1>Abhishek Sharma<br><span class="ca">Performance</span> &amp; <span class="cg">Growth Marketer</span></h1>
+  <p class="hero-desc">4+ years driving measurable growth across Meta, Google &amp; LinkedIn Ads. Managed ₹63L+ in Meta spend, achieved up to <strong style="color:var(--text)">10.11x ROAS</strong>, and delivered 35,700+ Google conversions — across India, UAE, Georgia &amp; USA.</p>
+  <div class="hero-cta">
+    <a href="mailto:abhisheklakhanpal13@gmail.com" class="btn btn-p">✉ Get in touch</a>
+    <a href="https://wa.me/918375994314" target="_blank" class="btn btn-s">💬 WhatsApp</a>
+    <a href="https://abhisheksharmadr13.wixsite.com/portfolio" target="_blank" class="btn btn-s">↗ Portfolio</a>
+  </div>
+</section>
 
-  <!-- STATS -->
-  <div class="stats-bar">
-    <div class="stat">
-      <span class="stat-number">$4M+</span>
-      <span class="stat-label">Ad spend managed</span>
+<div class="stats-bar">
+  <div class="stat-item"><span class="snum a">₹63L+</span><span class="slbl">Meta ad spend managed</span></div>
+  <div class="stat-item"><span class="snum g">10.11x</span><span class="slbl">Peak ROAS achieved</span></div>
+  <div class="stat-item"><span class="snum o">35,700+</span><span class="slbl">Google conversions</span></div>
+  <div class="stat-item"><span class="snum p">10+</span><span class="slbl">Clients, 4 countries</span></div>
+</div>
+
+<section id="work" class="section">
+  <div class="sec-title"><div class="sec-icon ib">📊</div>Case Studies</div>
+
+  <div class="case-card" onclick="toggleCase(this)">
+    <div class="case-head">
+      <div class="tags"><span class="tag tg">E-commerce</span><span class="tag tb">Meta Ads</span><span class="tag tgr">Feb 2026</span></div>
+      <button class="tog">Details ↓</button>
     </div>
-    <div class="stat">
-      <span class="stat-number">3.8x</span>
-      <span class="stat-label">Average ROAS</span>
+    <div class="ctitle">Meta E-commerce: 10.11x ROAS — 305 purchases in one month</div>
+    <div class="cdesc">Multi-ad-set Meta campaign delivering exceptional purchase ROAS. Restructured audience targeting and scaled winning creatives to drive 305 website purchases at ₹52 cost per purchase in a single month.</div>
+    <div class="mrow">
+      <div class="mbox"><span class="mval">10.11x</span><span class="mlbl">Peak ROAS (best ad set)</span></div>
+      <div class="mbox"><span class="mval">8.66x</span><span class="mlbl">Overall campaign ROAS</span></div>
+      <div class="mbox"><span class="mval b">305</span><span class="mlbl">Website purchases</span></div>
     </div>
-    <div class="stat">
-      <span class="stat-number">40+</span>
-      <span class="stat-label">Campaigns launched</span>
+    <div class="cdetail">
+      <div class="dgrid">
+        <div class="dbox"><h4>Spend &amp; Revenue</h4><p>₹15,863 total spend | ₹1,37,446 revenue | ₹52.01 avg. cost per purchase. 7 ad sets running simultaneously with distinct audience segments.</p></div>
+        <div class="dbox"><h4>Top Performers</h4><p>Best ad set: 99 purchases at ₹52.60 CPA, 6.88x ROAS. Second: 85 purchases at ₹70.71 CPA, 10.11x ROAS. Third: 117 purchases at ₹32.52 CPA, 9.80x ROAS.</p></div>
+        <div class="dbox"><h4>Strategy</h4><p>A/B tested creatives and audience layers continuously. Scaled budget into winning sets, paused underperformers. Maintained high ROAS while increasing overall spend.</p></div>
+        <div class="dbox"><h4>Outcome</h4><p>305 purchases in one month. Campaign ROAS 8.66x overall — well above e-commerce benchmark of 3–4x. Campaign ongoing and profitably scaling.</p></div>
+      </div>
     </div>
   </div>
 
-  <!-- CASE STUDIES -->
-  <section id="work">
-    <div class="cases-grid">
-      <div class="section-header">
-        <span class="section-tag">Case studies</span>
-        <div class="section-line"></div>
-      </div>
-
-      <!-- Case 1 -->
-      <div class="case-card" onclick="toggleCase(this)">
-        <div class="case-top">
-          <div class="case-meta">
-            <span class="pill">E-commerce</span>
-            <span class="pill channel">Google Ads</span>
-            <span class="pill channel">Meta Ads</span>
-          </div>
-          <button class="expand-btn">View details ↓</button>
-        </div>
-        <div class="case-title">Scaled DTC brand from $30K to $180K/mo in 6 months</div>
-        <div class="case-brief">A consumer skincare brand needed to break past a revenue plateau. Rebuilt campaign architecture from scratch — new audience structure, creative testing framework, and bid strategy overhaul.</div>
-        <div class="case-metrics">
-          <div class="metric"><span class="metric-val">4.6x</span><span class="metric-label">ROAS achieved</span></div>
-          <div class="metric"><span class="metric-val">−38%</span><span class="metric-label">CPA reduction</span></div>
-          <div class="metric"><span class="metric-val">6x</span><span class="metric-label">Revenue growth</span></div>
-        </div>
-        <div class="case-detail">
-          <div class="detail-grid">
-            <div class="detail-block">
-              <h4>Challenge</h4>
-              <p>Brand had strong organic presence but paid was unprofitable. ROAS sat at 1.2x with rising CPMs and no systematic testing process.</p>
-            </div>
-            <div class="detail-block">
-              <h4>Strategy</h4>
-              <p>Rebuilt Meta using broad + Advantage+ hybrid. Google restructured into Performance Max with custom audience signals from CRM data.</p>
-            </div>
-            <div class="detail-block">
-              <h4>Execution</h4>
-              <p>Launched weekly creative sprints — 3 concepts tested per week. Built a Looker Studio dashboard tracking blended ROAS daily.</p>
-            </div>
-            <div class="detail-block">
-              <h4>Outcome</h4>
-              <p>Achieved 4.6x ROAS at $180K/mo spend. CPA dropped 38% in 90 days. Brand scaled to a new market the following quarter.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Case 2 -->
-      <div class="case-card" onclick="toggleCase(this)">
-        <div class="case-top">
-          <div class="case-meta">
-            <span class="pill">B2B SaaS</span>
-            <span class="pill channel">LinkedIn Ads</span>
-            <span class="pill channel">Google Ads</span>
-          </div>
-          <button class="expand-btn">View details ↓</button>
-        </div>
-        <div class="case-title">Reduced B2B SaaS CPL by 52% through LinkedIn restructure</div>
-        <div class="case-brief">A Series A SaaS company was generating leads at $280 CPL on LinkedIn — far above their $130 target. Diagnosed targeting inefficiencies and rebuilt the entire funnel.</div>
-        <div class="case-metrics">
-          <div class="metric"><span class="metric-val">−52%</span><span class="metric-label">CPL drop</span></div>
-          <div class="metric"><span class="metric-val">3.1x</span><span class="metric-label">Pipeline ROI</span></div>
-          <div class="metric"><span class="metric-val">$134</span><span class="metric-label">Final CPL</span></div>
-        </div>
-        <div class="case-detail">
-          <div class="detail-grid">
-            <div class="detail-block">
-              <h4>Challenge</h4>
-              <p>Campaign targeting overlapping audiences, leading to high frequency and wasted spend. Lead form quality was also poor — sales rejected 60% of leads.</p>
-            </div>
-            <div class="detail-block">
-              <h4>Strategy</h4>
-              <p>Segmented ICP tightly by company size and seniority. Introduced Matched Audiences from CRM. Built mid-funnel retargeting with case study content.</p>
-            </div>
-            <div class="detail-block">
-              <h4>Execution</h4>
-              <p>Created 3 audience tiers: cold, warm, hot. Each tier had distinct messaging and offers — awareness, demo request, free trial respectively.</p>
-            </div>
-            <div class="detail-block">
-              <h4>Outcome</h4>
-              <p>CPL reduced to $134 in 45 days. Lead quality improved — sales acceptance rose from 40% to 74%. Pipeline value delivered 3.1x ROI.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Case 3 -->
-      <div class="case-card" onclick="toggleCase(this)">
-        <div class="case-top">
-          <div class="case-meta">
-            <span class="pill">Lead Gen</span>
-            <span class="pill channel">Google Ads</span>
-          </div>
-          <button class="expand-btn">View details ↓</button>
-        </div>
-        <div class="case-title">Google Search overhaul — 2.4x conversions, same budget</div>
-        <div class="case-brief">A financial services brand had untouched Google campaigns running on broad match keywords. A deep account audit revealed massive inefficiencies and quality score issues.</div>
-        <div class="case-metrics">
-          <div class="metric"><span class="metric-val">2.4x</span><span class="metric-label">Conversions</span></div>
-          <div class="metric"><span class="metric-val">+61%</span><span class="metric-label">Quality score</span></div>
-          <div class="metric"><span class="metric-val">−29%</span><span class="metric-label">Wasted spend</span></div>
-        </div>
-        <div class="case-detail">
-          <div class="detail-grid">
-            <div class="detail-block">
-              <h4>Challenge</h4>
-              <p>Account had 800+ keywords with no negative keyword strategy. 34% of spend going to irrelevant search terms. Landing pages mismatched to ad intent.</p>
-            </div>
-            <div class="detail-block">
-              <h4>Strategy</h4>
-              <p>SKAG structure replaced with tightly themed ad groups. Built 400+ negative keyword list. Created dedicated landing pages per campaign theme.</p>
-            </div>
-            <div class="detail-block">
-              <h4>Execution</h4>
-              <p>8-week restructure: weeks 1–2 audit, weeks 3–5 rebuild, weeks 6–8 optimisation sprint. A/B tested landing pages using Google Optimize.</p>
-            </div>
-            <div class="detail-block">
-              <h4>Outcome</h4>
-              <p>Conversions 2.4x with same budget. Average Quality Score up from 4.1 to 6.6. Wasted spend cut 29% through negative keyword expansion.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  <div class="case-card" onclick="toggleCase(this)">
+    <div class="case-head">
+      <div class="tags"><span class="tag tg">E-commerce</span><span class="tag tb">Meta Ads</span><span class="tag to">International USD</span></div>
+      <button class="tog">Details ↓</button>
     </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="skills-section" id="skills">
-    <div class="section-header">
-      <span class="section-tag">Skills &amp; channels</span>
-      <div class="section-line"></div>
+    <div class="ctitle">International Meta (USD): $21,322 revenue on $7,102 spend — 3x ROAS</div>
+    <div class="cdesc">Full-funnel Meta strategy for international e-commerce clients. Managed 11 campaigns including broad ASC, catalogue retargeting, MOF/BOF and creative testing — delivering consistent 3x ROAS at scale across Nov 2025 – Jan 2026.</div>
+    <div class="mrow">
+      <div class="mbox"><span class="mval">3.42x</span><span class="mlbl">Top campaign ROAS</span></div>
+      <div class="mbox"><span class="mval">$21,322</span><span class="mlbl">Total revenue</span></div>
+      <div class="mbox"><span class="mval b">236</span><span class="mlbl">Total purchases</span></div>
     </div>
-
-    <div class="channels-grid">
-      <div class="channel-card">
-        <div class="channel-icon g">G</div>
-        <div class="channel-name">Google Ads</div>
-        <div class="channel-skills">Search, Shopping, Performance Max, Display, YouTube, SKAG/STAG, Smart Bidding, Negative Keywords</div>
-      </div>
-      <div class="channel-card">
-        <div class="channel-icon m">f</div>
-        <div class="channel-name">Meta Ads</div>
-        <div class="channel-skills">Advantage+, Retargeting, Lookalike Audiences, Creative Testing, CAPI, Catalog Ads, Lead Gen</div>
-      </div>
-      <div class="channel-card">
-        <div class="channel-icon li">in</div>
-        <div class="channel-name">LinkedIn Ads</div>
-        <div class="channel-skills">Matched Audiences, Lead Gen Forms, Sponsored Content, Account-Based Marketing, ICP Targeting</div>
+    <div class="cdetail">
+      <div class="dgrid">
+        <div class="dbox"><h4>Campaign Structure</h4><p>11 campaigns: TOF broad, ASC, MOF+BOF retargeting, catalogue, holiday gifts, creative testing, warm retargeting. Complete funnel from awareness to purchase.</p></div>
+        <div class="dbox"><h4>Top Performers</h4><p>TOF ASC Broad: 89 purchases, $2,624 spend, 3.42x ROAS. ASC Broad: 73 purchases, 2.98x ROAS. MOF+BOF: 46 purchases, 2.73x ROAS.</p></div>
+        <div class="dbox"><h4>Funnel Strategy</h4><p>Cold: Broad/ASC campaigns. Mid-funnel: catalogue retargeting. Warm: custom audience retargeting. Budget dynamically shifted based on daily ROAS signals.</p></div>
+        <div class="dbox"><h4>Outcome</h4><p>$7,102 → $21,322 revenue. 3x average ROAS. 1,930 add-to-carts, 675 checkout initiations across all campaigns.</p></div>
       </div>
     </div>
+  </div>
 
-    <div class="tools-label">Tools &amp; platforms</div>
-    <div class="tools-row">
-      <span class="tool-tag">GA4</span>
-      <span class="tool-tag">Looker Studio</span>
-      <span class="tool-tag">HubSpot</span>
-      <span class="tool-tag">Klaviyo</span>
-      <span class="tool-tag">Semrush</span>
-      <span class="tool-tag">Hotjar</span>
-      <span class="tool-tag">Triple Whale</span>
-      <span class="tool-tag">Unbounce</span>
-      <span class="tool-tag">Notion</span>
-      <span class="tool-tag">Google Tag Manager</span>
-      <span class="tool-tag">Zapier</span>
-      <span class="tool-tag">Google Optimize</span>
+  <div class="case-card" onclick="toggleCase(this)">
+    <div class="case-head">
+      <div class="tags"><span class="tag tg">E-commerce</span><span class="tag tb">Meta Ads</span><span class="tag tp">3-Year Track Record</span></div>
+      <button class="tog">Details ↓</button>
     </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section class="certs-section">
-    <div class="section-header">
-      <span class="section-tag">Certifications</span>
-      <div class="section-line"></div>
+    <div class="ctitle">3-Year Meta Performance: 5.57x avg ROAS, ₹4L revenue on ₹71K spend</div>
+    <div class="cdesc">Consistent Meta ad management from Feb 2023 to Mar 2026. Maintained profitable ROAS across all campaigns — ₹4,00,244 revenue on ₹71,887 spend with 2,87,236 people reached.</div>
+    <div class="mrow">
+      <div class="mbox"><span class="mval">5.57x</span><span class="mlbl">Average ROAS (3 years)</span></div>
+      <div class="mbox"><span class="mval">₹4,00,244</span><span class="mlbl">Total revenue</span></div>
+      <div class="mbox"><span class="mval b">8.48x</span><span class="mlbl">Best campaign ROAS</span></div>
     </div>
-    <div class="certs-row">
-      <div class="cert-chip"><div class="cert-dot" style="background:#ea5a40;"></div>Google Ads Certified</div>
-      <div class="cert-chip"><div class="cert-dot" style="background:#5b9cf6;"></div>Meta Blueprint</div>
-      <div class="cert-chip"><div class="cert-dot" style="background:#5b9cf6;"></div>LinkedIn Marketing Labs</div>
-      <div class="cert-chip"><div class="cert-dot" style="background:#d4e87a;"></div>Google Analytics 4</div>
-      <div class="cert-chip"><div class="cert-dot" style="background:#ff7a59;"></div>HubSpot Marketing</div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials-section">
-    <div class="section-header">
-      <span class="section-tag">Testimonials</span>
-      <div class="section-line"></div>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-quote">Completely transformed our paid strategy. Results were visible within the first month — ROAS doubled and our CPL hit targets we'd never reached before.</div>
-        <div class="testi-author">
-          <strong>Priya Sharma</strong>
-          Head of Marketing, SaaS Company
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-quote">One of the sharpest performance marketers I've worked with. Data-driven, fast to execute, and always focused on business outcomes — not just ad metrics.</div>
-        <div class="testi-author">
-          <strong>Rahul Mehta</strong>
-          Founder, D2C Brand
-        </div>
+    <div class="cdetail">
+      <div class="dgrid">
+        <div class="dbox"><h4>Long-term Results</h4><p>Campaign 1: 91 purchases, ₹43,381 spend, 4.51x ROAS. Campaign 2: 33 purchases, ₹16,678 spend, 7.34x ROAS. Campaign 3: 10 purchases, 8.14x ROAS. All ongoing.</p></div>
+        <div class="dbox"><h4>Piggy Bank Campaign</h4><p>₹4,050 spend | 43 purchases | ₹94.20 CPA | 8.48x ROAS. High-efficiency small-budget campaign showing ability to scale profitably at all budget levels.</p></div>
+        <div class="dbox"><h4>Lead Generation</h4><p>Active lead gen campaign (Mar 2026): 20 leads at ₹41.96 per lead. 3,764 impressions, 3,093 reach. Cost-efficient B2C lead generation running alongside purchase campaigns.</p></div>
+        <div class="dbox"><h4>Overall Facebook Account</h4><p>₹63,33,330 total spend | 2.15Cr people reached | 11.69Cr impressions | 30.18L link clicks | 1,23,850 post shares. Account growing month-on-month.</p></div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- CONTACT -->
-  <section class="contact-section" id="contact">
+  <div class="case-card" onclick="toggleCase(this)">
+    <div class="case-head">
+      <div class="tags"><span class="tag to">Google Ads</span><span class="tag tg">Search + YouTube</span><span class="tag tgr">All time</span></div>
+      <button class="tog">Details ↓</button>
+    </div>
+    <div class="ctitle">Google Ads: 733K clicks, 82.1M impressions, 35,700+ conversions</div>
+    <div class="cdesc">Full Google Ads management across Search, Shopping, Display and YouTube. Achieved massive scale with 82M+ impressions and 35.7K conversions. App install CPI optimised from ₹6.71 → ₹1.90 (72% reduction).</div>
+    <div class="mrow">
+      <div class="mbox"><span class="mval o">733K</span><span class="mlbl">Total clicks</span></div>
+      <div class="mbox"><span class="mval">35,700+</span><span class="mlbl">Total conversions</span></div>
+      <div class="mbox"><span class="mval b">₹0.02</span><span class="mlbl">YouTube CPV achieved</span></div>
+    </div>
+    <div class="cdetail">
+      <div class="dgrid">
+        <div class="dbox"><h4>Google Account Overview</h4><p>733K total clicks | 82.1M impressions | ₹1.91M conversion value | 35,700 conversions across all campaign types and accounts managed.</p></div>
+        <div class="dbox"><h4>App Install Campaign</h4><p>CPI slashed from ₹6.71 → ₹1.90 (72% reduction). 749 installs at ₹1,419.70 total cost. 74,111 impressions, 24.22% conversion rate. Exceptional efficiency for app campaigns.</p></div>
+        <div class="dbox"><h4>YouTube Campaign</h4><p>Achieved ₹0.02 per view — extremely low CPV. 77.3K impressions, 22.5K views, ₹490 total spend. Demonstrates ability to drive massive video reach on minimal budget.</p></div>
+        <div class="dbox"><h4>Shopping Campaign (UK Fashion)</h4><p>Fashion brand Google Shopping: £5.87K spend | 92 conversions | £21.8K conv value | 3.71x ROAS. Avg CPC £0.61–0.76 over 5 months (Jan–May).</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-card" onclick="toggleCase(this)">
+    <div class="case-head">
+      <div class="tags"><span class="tag tg">Large Scale</span><span class="tag tb">Meta Ads</span><span class="tag to">₹47L+ Spend</span></div>
+      <button class="tog">Details ↓</button>
+    </div>
+    <div class="ctitle">Enterprise Meta account: ₹47.3L spend, 40.9M reach, 9,763 ad sets</div>
+    <div class="cdesc">Managed one of the largest Meta accounts — 9,763 ad sets across all campaigns. ₹4,736,521 total spend with 40.9M people reached and 10.3Cr impressions. Consistent purchase delivery across all active campaigns.</div>
+    <div class="mrow">
+      <div class="mbox"><span class="mval o">₹47.3L</span><span class="mlbl">Total spend managed</span></div>
+      <div class="mbox"><span class="mval">40.9M</span><span class="mlbl">Total reach</span></div>
+      <div class="mbox"><span class="mval b">9,763</span><span class="mlbl">Ad sets managed</span></div>
+    </div>
+    <div class="cdetail">
+      <div class="dgrid">
+        <div class="dbox"><h4>Scale</h4><p>9,763 ad sets | ₹4,736,521.42 total spend | 40,928,511 impressions | 10,328,507 people reached. Enterprise-level Meta account management across multiple brands.</p></div>
+        <div class="dbox"><h4>Active Campaign Results</h4><p>CPA: ₹500–₹830 per purchase. Per-ad-set spend: ₹11,593–₹18,286. Results from 12 ad sets: 213 purchases | 4,94,463 people | 10,58,524 impressions | ₹501.44 avg CPA.</p></div>
+        <div class="dbox"><h4>Multi-brand Traffic Campaigns</h4><p>Amazon Traffic, Truveda Skincare Delhi, Truveda Oil India, Website Conversions. 15 campaigns | 3,32,094 reach | 4,36,465 impressions | ₹35,906 total spend.</p></div>
+        <div class="dbox"><h4>BBCream Campaign</h4><p>4 active ad sets | 73,825–97,784 reach per set | ₹500–₹830 CPA | ₹11,593–₹18,286 spend each. Consistent purchase delivery at scale with tight CPA control.</p></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section id="clients" class="section">
+  <div class="sec-title"><div class="sec-icon ig">🌍</div>Clients — International &amp; National</div>
+  <div class="cligrid">
+    <div class="clicard"><div class="cdot" style="background:#58a6ff"></div><div><div class="cname">Infinity Fitness</div><div class="cloc">UAE 🇦🇪</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#3fb950"></div><div><div class="cname">Travel Door</div><div class="cloc">Georgia 🇬🇪</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#bc8cff"></div><div><div class="cname">Rawls Luxure</div><div class="cloc">India → USA 🇺🇸</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#d29922"></div><div><div class="cname">Bagdara Farms</div><div class="cloc">India 🇮🇳</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#f78166"></div><div><div class="cname">Lujobox</div><div class="cloc">India 🇮🇳</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#58a6ff"></div><div><div class="cname">Divine Aroma</div><div class="cloc">India 🇮🇳</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#3fb950"></div><div><div class="cname">The Solluna Resort</div><div class="cloc">India 🇮🇳</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#bc8cff"></div><div><div class="cname">Belhasa Car Rental</div><div class="cloc">UAE 🇦🇪</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#d29922"></div><div><div class="cname">College Dhundo</div><div class="cloc">MBA/B.tech/MBBS Leads</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#f78166"></div><div><div class="cname">The Chai Calling</div><div class="cloc">India 🇮🇳</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#58a6ff"></div><div><div class="cname">Briyani N More</div><div class="cloc">India 🇮🇳</div></div></div>
+    <div class="clicard"><div class="cdot" style="background:#3fb950"></div><div><div class="cname">Ikraah The Sufi Band</div><div class="cloc">India 🇮🇳</div></div></div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="sec-title"><div class="sec-icon io">⚡</div>Skills &amp; Channel Expertise</div>
+  <div class="chgrid">
+    <div class="chcard"><div class="chlogo lg">G</div><div class="chname">Google Ads</div><div class="chsk">Search, Shopping, Performance Max, Display, YouTube, App Campaigns, Smart Bidding, Negative Keywords</div></div>
+    <div class="chcard"><div class="chlogo lm">f</div><div class="chname">Meta Ads</div><div class="chsk">Advantage+, ASC, Catalogue Ads, Retargeting, Lookalike, CAPI, Creative Testing, A/B Testing, Lead Gen</div></div>
+    <div class="chcard"><div class="chlogo ll">in</div><div class="chname">LinkedIn Ads</div><div class="chsk">Matched Audiences, Lead Gen Forms, Sponsored Content, Account-Based Marketing, B2B Targeting</div></div>
+  </div>
+  <div style="margin-bottom:10px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em">Tools &amp; Platforms</div>
+  <div class="tools">
+    <span class="tool">GA4</span><span class="tool">Looker Studio</span><span class="tool">Meta Business Suite</span>
+    <span class="tool">Google Tag Manager</span><span class="tool">Fanpage Karma</span><span class="tool">HubSpot</span>
+    <span class="tool">Klaviyo</span><span class="tool">Semrush</span><span class="tool">Hotjar</span>
+    <span class="tool">Triple Whale</span><span class="tool">Unbounce</span><span class="tool">Email Marketing</span>
+    <span class="tool">Lead Generation</span><span class="tool">Zapier</span>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-title"><div class="sec-icon ip">🏆</div>Certifications</div>
+  <div class="certwrap">
+    <div class="cert"><div class="certdot" style="background:#ea5a40"></div>Google Ads Certified</div>
+    <div class="cert"><div class="certdot" style="background:#1877f2"></div>Meta Blueprint</div>
+    <div class="cert"><div class="certdot" style="background:#0a66c2"></div>LinkedIn Marketing Labs</div>
+    <div class="cert"><div class="certdot" style="background:#fbbc05"></div>Google Analytics 4</div>
+    <div class="cert"><div class="certdot" style="background:#ff7a59"></div>HubSpot Marketing</div>
+    <div class="cert"><div class="certdot" style="background:#3fb950"></div>Performance Marketing Specialist</div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="contact-box">
     <h2>Let's work together</h2>
-    <p>Open to full-time roles, freelance projects, and consulting engagements.<br>I typically respond within 24 hours.</p>
-    <div class="contact-links">
-      <a href="mailto:you@email.com" class="btn-primary">Send an email</a>
-      <a href="https://linkedin.com/in/yourprofile" class="btn-outline" target="_blank">LinkedIn profile</a>
-      <a href="https://calendly.com/yourlink" class="btn-outline" target="_blank">Book a call</a>
+    <p>Open to full-time roles, freelance projects &amp; consulting.<br>Based in India — available for remote &amp; on-site opportunities.</p>
+    <div class="cbtns">
+      <a href="mailto:abhisheklakhanpal13@gmail.com" class="btn btn-p">✉ Send Email</a>
+      <a href="https://wa.me/918375994314" target="_blank" class="btn btn-s">💬 WhatsApp</a>
+      <a href="https://linkedin.com/in/abhisheksharmdr13" target="_blank" class="btn btn-s">in LinkedIn</a>
     </div>
-  </section>
-
-  <footer>
-    <p>Built with HTML &amp; CSS · Hosted free on GitHub Pages · &copy; 2026 Your Name</p>
-  </footer>
+    <div class="cinfo">
+      <span>📞 <a href="tel:+918375994314">+91 83 759 94314</a></span>
+      <span>✉ <a href="mailto:abhisheklakhanpal13@gmail.com">abhisheklakhanpal13@gmail.com</a></span>
+    </div>
+  </div>
+</section>
 
 </div>
-
 <script>
-  function toggleCase(card) {
-    const detail = card.querySelector('.case-detail');
-    const btn = card.querySelector('.expand-btn');
-    const isOpen = detail.classList.contains('open');
-    document.querySelectorAll('.case-detail').forEach(d => d.classList.remove('open'));
-    document.querySelectorAll('.case-card').forEach(c => c.classList.remove('active'));
-    document.querySelectorAll('.expand-btn').forEach(b => b.textContent = 'View details ↓');
-    if (!isOpen) {
-      detail.classList.add('open');
-      card.classList.add('active');
-      btn.textContent = 'Hide details ↑';
-    }
-  }
+function toggleCase(card){
+  const d=card.querySelector('.cdetail'),b=card.querySelector('.tog'),o=card.classList.contains('open');
+  document.querySelectorAll('.case-card').forEach(c=>{c.classList.remove('open');c.querySelector('.cdetail').classList.remove('open');c.querySelector('.tog').textContent='Details ↓';});
+  if(!o){card.classList.add('open');d.classList.add('open');b.textContent='Close ↑';card.scrollIntoView({behavior:'smooth',block:'nearest'});}
+}
 </script>
 </body>
 </html>
