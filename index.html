@@ -6,85 +6,141 @@
 <title>Abhishek Sharma | Performance Marketer</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-/* ============================================
-   HOW TO EDIT (NO CODING NEEDED):
-   Open in Notepad → Ctrl+F → search text → replace → save → upload to GitHub
-   ============================================ */
+/*
+=======================================================
+  HOW TO ADD YOUR IMAGES (NO CODING NEEDED):
+  
+  OPTION 1 - EASIEST (Imgur - Free):
+  1. Go to imgur.com → Upload your screenshot
+  2. Right-click the image → "Copy image address"
+  3. Open this file in Notepad → Ctrl+F
+  4. Search for: YOUR-IMAGE-URL-HERE
+  5. Replace with the Imgur link you copied
+  6. Save → Upload to GitHub
+  
+  OPTION 2 - GitHub:
+  1. Upload your screenshot to your GitHub repo
+  2. Click the image file → click "Raw"
+  3. Copy that URL
+  4. Replace YOUR-IMAGE-URL-HERE with that URL
+=======================================================
+*/
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--bg4:#30363d;
-  --text:#e6edf3;--muted:#7d8590;--muted2:#484f58;
-  --accent:#58a6ff;--green:#3fb950;--orange:#d29922;--purple:#bc8cff;
+  --text:#e6edf3;--muted:#9198a1;
+  --accent:#58a6ff;--green:#3fb950;--orange:#d29922;--purple:#bc8cff;--red:#f85149;
   --border:#30363d;--border2:#3d444d;
-  --font-h:'Syne',sans-serif;--font-b:'DM Sans',sans-serif;
+  --fh:'Syne',sans-serif;--fb:'DM Sans',sans-serif;
 }
-body{background:var(--bg);color:var(--text);font-family:var(--font-b);font-size:15px;line-height:1.65}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:15px;line-height:1.65}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
-.wrap{max-width:900px;margin:0 auto;padding:0 20px 80px}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px 80px}
 
-nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:48px;position:sticky;top:0;background:rgba(13,17,23,0.96);backdrop-filter:blur(8px);z-index:100}
-.nav-brand{display:flex;align-items:center;gap:10px;font-family:var(--font-h);font-weight:700;font-size:15px;color:var(--text)}
-.avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#58a6ff,#bc8cff);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;font-family:var(--font-h)}
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:48px;position:sticky;top:0;background:rgba(13,17,23,.96);backdrop-filter:blur(8px);z-index:100}
+.nav-brand{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:700;font-size:15px;color:var(--text)}
+.av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#58a6ff,#bc8cff);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;font-family:var(--fh)}
 .nav-links{display:flex;gap:4px;list-style:none}
 .nav-links a{color:var(--muted);font-size:13px;padding:6px 12px;border-radius:6px;transition:all .15s;text-decoration:none}
 .nav-links a:hover{color:var(--text);background:var(--bg3)}
 
-.hero{margin-bottom:48px;padding-top:8px}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.3);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--green);margin-bottom:20px}
+/* HERO */
+.hero{margin-bottom:48px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.3);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--green);margin-bottom:20px}
 .bdot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-h1{font-family:var(--font-h);font-size:clamp(30px,5vw,50px);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;color:var(--text)}
+h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-height:1.2;letter-spacing:-.01em;margin-bottom:16px}
 .ca{color:var(--accent)}.cg{color:var(--green)}
-.hero-desc{font-size:15px;color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:28px}
-.hero-cta{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:6px;font-size:14px;font-family:var(--font-b);font-weight:500;cursor:pointer;transition:all .15s;text-decoration:none;border:1px solid transparent}
+.hdesc{font-size:16px;color:#c9d1d9;max-width:580px;line-height:1.8;margin-bottom:28px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:6px;font-size:14px;font-family:var(--fb);font-weight:500;cursor:pointer;transition:all .15s;text-decoration:none;border:1px solid transparent}
 .btn-p{background:var(--green);color:#0d1117;border-color:var(--green)}
 .btn-p:hover{background:#3aa84a;text-decoration:none}
 .btn-s{background:var(--bg3);color:var(--text);border-color:var(--border2)}
 .btn-s:hover{background:var(--bg4);text-decoration:none}
 
-.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:48px;background:var(--bg2)}
-.stat-item{padding:20px 14px;text-align:center;border-right:1px solid var(--border)}
-.stat-item:last-child{border-right:none}
-.snum{font-family:var(--font-h);font-size:24px;font-weight:800;letter-spacing:-.02em;display:block}
-.snum.a{color:var(--accent)}.snum.g{color:var(--green)}.snum.o{color:var(--orange)}.snum.p{color:var(--purple)}
-.slbl{font-size:11px;color:var(--muted);margin-top:3px}
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:48px;background:var(--bg2)}
+.si{padding:18px 12px;text-align:center;border-right:1px solid var(--border)}
+.si:last-child{border-right:none}
+.sn{font-family:var(--fh);font-size:22px;font-weight:800;letter-spacing:-.02em;display:block}
+.sn.a{color:var(--accent)}.sn.g{color:var(--green)}.sn.o{color:var(--orange)}.sn.p{color:var(--purple)}
+.sl{font-size:11px;color:var(--muted);margin-top:3px}
 
-.section{margin-bottom:48px}
-.sec-title{display:flex;align-items:center;gap:10px;font-family:var(--font-h);font-size:18px;font-weight:700;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);color:var(--text)}
-.sec-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px}
+/* SECTION */
+.sec{margin-bottom:48px}
+.sec-title{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.sico{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px}
 .ib{background:rgba(88,166,255,.15)}.ig{background:rgba(63,185,80,.15)}.io{background:rgba(210,153,34,.15)}.ip{background:rgba(188,140,255,.15)}
 
-.case-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:22px;margin-bottom:12px;cursor:pointer;transition:border-color .2s;position:relative;overflow:hidden}
-.case-card:hover{border-color:var(--border2)}
-.case-card.open{border-color:var(--accent)}
-.case-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);opacity:0;transition:opacity .2s}
-.case-card.open::before{opacity:1}
-.case-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
+/* CASE CARDS */
+.cc{background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;transition:border-color .2s;position:relative}
+.cc:hover{border-color:var(--border2)}
+.cc.open{border-color:var(--accent)}
+.cc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);opacity:0;transition:opacity .2s}
+.cc.open::before{opacity:1}
+.cc-header{padding:22px;cursor:pointer}
+.cc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
 .tags{display:flex;gap:6px;flex-wrap:wrap}
 .tag{font-size:11px;padding:2px 8px;border-radius:20px;border:1px solid}
 .tb{color:var(--accent);border-color:rgba(88,166,255,.3);background:rgba(88,166,255,.08)}
 .tg{color:var(--green);border-color:rgba(63,185,80,.3);background:rgba(63,185,80,.08)}
 .to{color:var(--orange);border-color:rgba(210,153,34,.3);background:rgba(210,153,34,.08)}
 .tp{color:var(--purple);border-color:rgba(188,140,255,.3);background:rgba(188,140,255,.08)}
+.tr{color:var(--red);border-color:rgba(248,81,73,.3);background:rgba(248,81,73,.08)}
 .tgr{color:var(--muted);border-color:var(--border);background:var(--bg3)}
-.tog{font-size:11px;color:var(--muted);background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;white-space:nowrap;font-family:var(--font-b);transition:all .15s;flex-shrink:0}
-.tog:hover{color:var(--text);border-color:var(--border2)}
-.ctitle{font-family:var(--font-h);font-size:17px;font-weight:700;margin-bottom:6px;line-height:1.3}
+.tog{font-size:11px;color:var(--muted);background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;white-space:nowrap;font-family:var(--fb);flex-shrink:0}
+.ctit{font-family:var(--fh);font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.3}
 .cdesc{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6}
 .mrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.mbox{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px}
-.mval{font-family:var(--font-h);font-size:20px;font-weight:700;color:var(--green);display:block;letter-spacing:-.02em}
-.mval.b{color:var(--accent)}.mval.o{color:var(--orange)}
-.mlbl{font-size:11px;color:var(--muted);margin-top:2px}
-.cdetail{display:none;margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}
-.cdetail.open{display:block}
-.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mb{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px}
+.mv{font-family:var(--fh);font-size:19px;font-weight:700;color:var(--green);display:block;letter-spacing:-.02em}
+.mv.b{color:var(--accent)}.mv.o{color:var(--orange)}.mv.p{color:var(--purple)}
+.ml{font-size:11px;color:var(--muted);margin-top:2px}
+
+/* CASE DETAIL */
+.cd{display:none;border-top:1px solid var(--border)}
+.cd.open{display:block}
+.cd-inner{padding:24px}
+
+/* CHANNEL TABS */
+.ch-tabs{display:flex;gap:2px;margin-bottom:20px;background:var(--bg3);padding:4px;border-radius:8px;width:fit-content}
+.ch-tab{padding:6px 16px;border-radius:6px;font-size:13px;cursor:pointer;color:var(--muted);transition:all .15s;font-family:var(--fb)}
+.ch-tab.active{background:var(--bg2);color:var(--text);border:1px solid var(--border)}
+
+/* IMAGE PROOF SECTION */
+.proof-section{margin-top:20px}
+.proof-title{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px;font-weight:500}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.proof-img{border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--bg3);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;cursor:pointer;transition:border-color .2s;position:relative}
+.proof-img:hover{border-color:var(--border2)}
+.proof-img img{width:100%;height:100%;object-fit:cover;display:none}
+.proof-img img.loaded{display:block}
+.proof-img .placeholder{display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px}
+.proof-img .placeholder.hidden{display:none}
+.img-icon{font-size:24px;opacity:.4}
+.img-label{font-size:12px;color:var(--muted);text-align:center;line-height:1.4}
+.img-hint{font-size:10px;color:var(--muted2);text-align:center;margin-top:4px}
+
+/* COMING SOON BADGE */
+.coming-soon{display:inline-flex;align-items:center;gap:6px;background:rgba(210,153,34,.1);border:1px solid rgba(210,153,34,.3);border-radius:20px;padding:3px 10px;font-size:11px;color:var(--orange)}
+
+/* Q&A STYLE */
+.qa-block{background:var(--bg3);border-radius:8px;padding:16px;margin-bottom:12px}
+.qa-q{font-size:13px;color:var(--accent);font-weight:500;margin-bottom:6px}
+.qa-a{font-size:13px;color:var(--text);line-height:1.6}
+
+/* DETAIL GRID */
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
 .dbox{background:var(--bg3);border-radius:8px;padding:14px}
 .dbox h4{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;font-weight:500}
 .dbox p{font-size:13px;color:var(--text);line-height:1.6}
+.dbox ul{font-size:13px;color:var(--text);line-height:1.8;padding-left:16px}
 
+/* CLIENTS */
 .cligrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .clicard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;display:flex;align-items:center;gap:10px;transition:border-color .15s}
 .clicard:hover{border-color:var(--border2)}
@@ -92,10 +148,11 @@ h1{font-family:var(--font-h);font-size:clamp(30px,5vw,50px);font-weight:800;line
 .cname{font-size:13px;font-weight:500;color:var(--text)}
 .cloc{font-size:11px;color:var(--muted)}
 
+/* SKILLS */
 .chgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
 .chcard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:18px;transition:border-color .15s}
 .chcard:hover{border-color:var(--border2)}
-.chlogo{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-weight:700;font-size:13px;margin-bottom:10px}
+.chlogo{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:13px;margin-bottom:10px}
 .lg{background:rgba(234,90,64,.15);color:#ea5a40}
 .lm{background:rgba(24,119,242,.15);color:#1877f2}
 .ll{background:rgba(10,102,194,.15);color:#0a66c2}
@@ -104,24 +161,32 @@ h1{font-family:var(--font-h);font-size:clamp(30px,5vw,50px);font-weight:800;line
 .tools{display:flex;flex-wrap:wrap;gap:8px}
 .tool{font-size:12px;padding:4px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--muted)}
 
+/* CERTS */
 .certwrap{display:flex;flex-wrap:wrap;gap:10px}
 .cert{display:flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:13px}
 .certdot{width:8px;height:8px;border-radius:50%}
 
+/* CONTACT */
 .contact-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:36px;text-align:center}
-.contact-box h2{font-family:var(--font-h);font-size:24px;font-weight:700;margin-bottom:8px}
+.contact-box h2{font-family:var(--fh);font-size:24px;font-weight:700;margin-bottom:8px}
 .contact-box p{color:var(--muted);font-size:14px;margin-bottom:24px}
 .cbtns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
 .cinfo{display:flex;justify-content:center;gap:24px;margin-top:18px;flex-wrap:wrap}
-.cinfo span,.cinfo a{font-size:13px;color:var(--muted)}
-.cinfo a{color:var(--accent)}
+.cinfo a{font-size:13px;color:var(--accent)}
+
+/* HOW TO ADD IMAGE GUIDE */
+.guide-box{background:rgba(88,166,255,.05);border:1px solid rgba(88,166,255,.2);border-radius:8px;padding:16px;margin-top:12px}
+.guide-box h4{font-size:12px;color:var(--accent);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em}
+.guide-steps{font-size:12px;color:var(--muted);line-height:1.8}
+.guide-steps span{color:var(--text)}
 
 @media(max-width:600px){
-  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
   .cligrid{grid-template-columns:repeat(2,1fr)}
   .chgrid{grid-template-columns:1fr 1fr}
   .mrow{grid-template-columns:1fr 1fr}
   .dgrid{grid-template-columns:1fr}
+  .proof-grid{grid-template-columns:1fr}
   .nav-links{display:none}
 }
 </style>
@@ -129,154 +194,431 @@ h1{font-family:var(--font-h);font-size:clamp(30px,5vw,50px);font-weight:800;line
 <body>
 <div class="wrap">
 
+<!-- NAV -->
 <nav>
   <div class="nav-brand">
-    <div class="avatar">AS</div>
+    <div class="av">AS</div>
     Abhishek Sharma
   </div>
   <ul class="nav-links">
-    <li><a href="#work">Work</a></li>
+    <li><a href="#work">Case Studies</a></li>
     <li><a href="#clients">Clients</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge"><div class="bdot"></div>Available for new projects</div>
+  <div class="badge"><div class="bdot"></div>Available for new projects</div>
   <h1>Abhishek Sharma<br><span class="ca">Performance</span> &amp; <span class="cg">Growth Marketer</span></h1>
-  <p class="hero-desc">4+ years driving measurable growth across Meta, Google &amp; LinkedIn Ads. Managed ₹63L+ in Meta spend, achieved up to <strong style="color:var(--text)">10.11x ROAS</strong>, and delivered 35,700+ Google conversions — across India, UAE, Georgia &amp; USA.</p>
-  <div class="hero-cta">
-    <a href="mailto:abhisheklakhanpal13@gmail.com" class="btn btn-p">✉ Get in touch</a>
+  <p class="hdesc">4+ years turning ad spend into measurable revenue across Meta, Google &amp; LinkedIn. Managed ₹63L+ in Meta spend, hit <strong style="color:var(--text)">10.11x ROAS</strong>, generated 4,623+ leads at ₹54/lead, and delivered 35,700+ Google conversions — across India, UAE, Georgia &amp; USA.</p>
+  <div class="cta">
+    <a href="/cdn-cgi/l/email-protection#5f3e3d37362c373a34333e34373e312f3e336e6c1f38323e3633713c3032" class="btn btn-p">✉ Get in touch</a>
     <a href="https://wa.me/918375994314" target="_blank" class="btn btn-s">💬 WhatsApp</a>
-    <a href="https://abhisheksharmadr13.wixsite.com/portfolio" target="_blank" class="btn btn-s">↗ Portfolio</a>
+    <a href="https://abhisheksharmadr13.wixsite.com/portfolio" target="_blank" class="btn btn-s">↗ Wix Portfolio</a>
   </div>
 </section>
 
-<div class="stats-bar">
-  <div class="stat-item"><span class="snum a">₹63L+</span><span class="slbl">Meta ad spend managed</span></div>
-  <div class="stat-item"><span class="snum g">10.11x</span><span class="slbl">Peak ROAS achieved</span></div>
-  <div class="stat-item"><span class="snum o">35,700+</span><span class="slbl">Google conversions</span></div>
-  <div class="stat-item"><span class="snum p">10+</span><span class="slbl">Clients, 4 countries</span></div>
+<!-- STATS -->
+<div class="stats">
+  <div class="si"><span class="sn a">₹63L+</span><span class="sl">Meta spend managed</span></div>
+  <div class="si"><span class="sn g">10.11x</span><span class="sl">Peak ROAS achieved</span></div>
+  <div class="si"><span class="sn o">4,623+</span><span class="sl">Leads generated</span></div>
+  <div class="si"><span class="sn p">35,700+</span><span class="sl">Google conversions</span></div>
 </div>
 
-<section id="work" class="section">
-  <div class="sec-title"><div class="sec-icon ib">📊</div>Case Studies</div>
+<!-- CASE STUDIES -->
+<section id="work" class="sec">
+  <div class="sec-title"><div class="sico ib">📊</div>Case Studies</div>
 
-  <div class="case-card" onclick="toggleCase(this)">
-    <div class="case-head">
-      <div class="tags"><span class="tag tg">E-commerce</span><span class="tag tb">Meta Ads</span><span class="tag tgr">Feb 2026</span></div>
-      <button class="tog">Details ↓</button>
+  <!-- ═══ CASE 1: META LEAD GEN ═══ -->
+  <div class="cc" id="case1">
+    <div class="cc-header" onclick="toggleCase('case1')">
+      <div class="cc-top">
+        <div class="tags">
+          <span class="tag tg">Meta Ads</span>
+          <span class="tag tb">Lead Generation</span>
+          <span class="tag to">Tier Targeting</span>
+        </div>
+        <button class="tog">Details ↓</button>
+      </div>
+      <div class="ctit">Meta Lead Gen: 1,098+ Leads at ₹49–50/lead using Tier-Based Targeting</div>
+      <div class="cdesc">Structured Meta lead generation campaign using smart tier audience segmentation. Delivered 1,098+ leads with cost per lead as low as ₹49–₹50 on ₹1,55,932 spend across 8,81,024 impressions.</div>
+      <div class="mrow">
+        <div class="mb"><span class="mv">1,098+</span><span class="ml">Total leads generated</span></div>
+        <div class="mb"><span class="mv b">₹49–50</span><span class="ml">Cost per lead</span></div>
+        <div class="mb"><span class="mv o">₹1,55,932</span><span class="ml">Total spend</span></div>
+      </div>
     </div>
-    <div class="ctitle">Meta E-commerce: 10.11x ROAS — 305 purchases in one month</div>
-    <div class="cdesc">Multi-ad-set Meta campaign delivering exceptional purchase ROAS. Restructured audience targeting and scaled winning creatives to drive 305 website purchases at ₹52 cost per purchase in a single month.</div>
-    <div class="mrow">
-      <div class="mbox"><span class="mval">10.11x</span><span class="mlbl">Peak ROAS (best ad set)</span></div>
-      <div class="mbox"><span class="mval">8.66x</span><span class="mlbl">Overall campaign ROAS</span></div>
-      <div class="mbox"><span class="mval b">305</span><span class="mlbl">Website purchases</span></div>
-    </div>
-    <div class="cdetail">
-      <div class="dgrid">
-        <div class="dbox"><h4>Spend &amp; Revenue</h4><p>₹15,863 total spend | ₹1,37,446 revenue | ₹52.01 avg. cost per purchase. 7 ad sets running simultaneously with distinct audience segments.</p></div>
-        <div class="dbox"><h4>Top Performers</h4><p>Best ad set: 99 purchases at ₹52.60 CPA, 6.88x ROAS. Second: 85 purchases at ₹70.71 CPA, 10.11x ROAS. Third: 117 purchases at ₹32.52 CPA, 9.80x ROAS.</p></div>
-        <div class="dbox"><h4>Strategy</h4><p>A/B tested creatives and audience layers continuously. Scaled budget into winning sets, paused underperformers. Maintained high ROAS while increasing overall spend.</p></div>
-        <div class="dbox"><h4>Outcome</h4><p>305 purchases in one month. Campaign ROAS 8.66x overall — well above e-commerce benchmark of 3–4x. Campaign ongoing and profitably scaling.</p></div>
+    <div class="cd" id="case1-detail">
+      <div class="cd-inner">
+
+        <!-- Q&A -->
+        <div class="qa-block">
+          <div class="qa-q">❓ What was the core challenge?</div>
+          <div class="qa-a">The client needed a high volume of quality leads at a controlled cost. Most advertisers struggle at ₹120–₹300 per lead with inconsistent quality. The goal was to bring CPL below ₹60 while maintaining lead quality through smart audience structure.</div>
+        </div>
+        <div class="qa-block">
+          <div class="qa-q">🎯 What strategy was used?</div>
+          <div class="qa-a">Tier-based audience segmentation — Tier 1, Tier 400, and Tier 500 campaigns. Each tier had its own budget cap, creative, and optimization logic. Winning ad sets were scaled; underperformers were paused immediately. Continuous CPL-based optimization kept costs in check.</div>
+        </div>
+
+        <div class="dgrid">
+          <div class="dbox"><h4>Campaign Breakdown</h4>
+            <ul>
+              <li>Total Spend: ₹1,55,932.80</li>
+              <li>Total Impressions: 8,81,024</li>
+              <li>Total Reach: 2,83,024+</li>
+              <li>Leads: 1,098+ (Tier-1-500 campaign)</li>
+              <li>CPL: ₹49–₹50 per lead</li>
+            </ul>
+          </div>
+          <div class="dbox"><h4>What Worked</h4>
+            <ul>
+              <li>Tier-based audience segmentation</li>
+              <li>Daily budget caps per tier</li>
+              <li>CPL-based continuous optimization</li>
+              <li>Scaling winners, killing losers fast</li>
+              <li>Structured testing before scaling</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PROOF SCREENSHOTS -->
+        <div class="proof-section">
+          <div class="proof-title">📸 Campaign Proof — Dashboard Screenshots</div>
+          <div class="proof-grid">
+            <!-- IMAGE 1: Replace YOUR-META-DASHBOARD-URL with your actual image URL -->
+            <div class="proof-img" onclick="openImg(this)">
+              <img src="https://github.com/abhisheksharmadr13/portfolio/blob/5106368585de84914769e2ac3fd1da473cb842d3/meta%20ads%201.jpeg" alt="Meta Lead Gen Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
+              <div class="placeholder">
+                <div class="img-icon">📊</div>
+                <div class="img-label">Meta Leads Dashboard<br><strong style="color:var(--text)">Replace with your screenshot</strong></div>
+                <div class="img-hint">See guide below ↓ to add your image</div>
+              </div>
+            </div>
+            <!-- IMAGE 2 -->
+            <div class="proof-img" onclick="openImg(this)">
+              <img src="https://github.com/abhisheksharmadr13/portfolio/blob/5106368585de84914769e2ac3fd1da473cb842d3/meta%20ads%201.jpeg" alt="Meta Ad Set Results" onload="imgLoaded(this)" onerror="imgError(this)">
+              <div class="placeholder">
+                <div class="img-icon">📈</div>
+                <div class="img-label">Ad Set Performance<br><strong style="color:var(--text)">Replace with your screenshot</strong></div>
+                <div class="img-hint">See guide below ↓ to add your image</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HOW TO ADD IMAGE GUIDE -->
+          <div class="guide-box">
+            <h4>📌 How to add your screenshots here (no coding)</h4>
+            <div class="guide-steps">
+              <span>Step 1:</span> Go to <strong>imgur.com</strong> → Upload your Meta screenshot<br>
+              <span>Step 2:</span> Right-click the uploaded image → <strong>"Copy image address"</strong><br>
+              <span>Step 3:</span> Open this file in Notepad → Press <strong>Ctrl+F</strong><br>
+              <span>Step 4:</span> Search for <strong>https://github.com/abhisheksharmadr13/portfolio/blob/5106368585de84914769e2ac3fd1da473cb842d3/meta%20ads%201.jpeg</strong><br>
+              <span>Step 5:</span> Replace it with your Imgur link → Save → Upload to GitHub ✅
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
-  <div class="case-card" onclick="toggleCase(this)">
-    <div class="case-head">
-      <div class="tags"><span class="tag tg">E-commerce</span><span class="tag tb">Meta Ads</span><span class="tag to">International USD</span></div>
-      <button class="tog">Details ↓</button>
+  <!-- ═══ CASE 2: META ROAS (Revenue Engine) ═══ -->
+  <div class="cc" id="case2">
+    <div class="cc-header" onclick="toggleCase('case2')">
+      <div class="cc-top">
+        <div class="tags">
+          <span class="tag tg">Meta Ads</span>
+          <span class="tag tb">E-commerce</span>
+          <span class="tag tp">5.81x ROAS</span>
+        </div>
+        <button class="tog">Details ↓</button>
+      </div>
+      <div class="ctit">Meta E-commerce: ₹28K spend → ₹1.52L+ revenue — 5.81x ROAS, 100 purchases</div>
+      <div class="cdesc">Turned ₹28,262 in ad spend into ₹1,52,000+ in tracked revenue in just over a month. One campaign alone delivered ₹1,39,344 in purchase value at 5.81x ROAS and ₹272 cost per purchase.</div>
+      <div class="mrow">
+        <div class="mb"><span class="mv">5.81x</span><span class="ml">ROAS achieved</span></div>
+        <div class="mb"><span class="mv b">100</span><span class="ml">Purchases</span></div>
+        <div class="mb"><span class="mv o">₹272</span><span class="ml">Cost per purchase</span></div>
+      </div>
     </div>
-    <div class="ctitle">International Meta (USD): $21,322 revenue on $7,102 spend — 3x ROAS</div>
-    <div class="cdesc">Full-funnel Meta strategy for international e-commerce clients. Managed 11 campaigns including broad ASC, catalogue retargeting, MOF/BOF and creative testing — delivering consistent 3x ROAS at scale across Nov 2025 – Jan 2026.</div>
-    <div class="mrow">
-      <div class="mbox"><span class="mval">3.42x</span><span class="mlbl">Top campaign ROAS</span></div>
-      <div class="mbox"><span class="mval">$21,322</span><span class="mlbl">Total revenue</span></div>
-      <div class="mbox"><span class="mval b">236</span><span class="mlbl">Total purchases</span></div>
-    </div>
-    <div class="cdetail">
-      <div class="dgrid">
-        <div class="dbox"><h4>Campaign Structure</h4><p>11 campaigns: TOF broad, ASC, MOF+BOF retargeting, catalogue, holiday gifts, creative testing, warm retargeting. Complete funnel from awareness to purchase.</p></div>
-        <div class="dbox"><h4>Top Performers</h4><p>TOF ASC Broad: 89 purchases, $2,624 spend, 3.42x ROAS. ASC Broad: 73 purchases, 2.98x ROAS. MOF+BOF: 46 purchases, 2.73x ROAS.</p></div>
-        <div class="dbox"><h4>Funnel Strategy</h4><p>Cold: Broad/ASC campaigns. Mid-funnel: catalogue retargeting. Warm: custom audience retargeting. Budget dynamically shifted based on daily ROAS signals.</p></div>
-        <div class="dbox"><h4>Outcome</h4><p>$7,102 → $21,322 revenue. 3x average ROAS. 1,930 add-to-carts, 675 checkout initiations across all campaigns.</p></div>
+    <div class="cd" id="case2-detail">
+      <div class="cd-inner">
+
+        <div class="qa-block">
+          <div class="qa-q">❓ What was the problem?</div>
+          <div class="qa-a">The client was running ads but getting inconsistent ROAS — sometimes 2x, sometimes nothing. They were spreading budget evenly across campaigns without tracking which ones actually drove purchases. Cost per purchase was rising with no clear strategy to fix it.</div>
+        </div>
+        <div class="qa-block">
+          <div class="qa-q">🎯 What made this campaign different?</div>
+          <div class="qa-a">We focused 100% on ROAS, not vanity metrics. Deep audience research, data-backed creative testing, and daily cost per acquisition tracking. Budget was only scaled when numbers justified it. Underperformers were killed fast. Winners were scaled confidently.</div>
+        </div>
+
+        <div class="dgrid">
+          <div class="dbox"><h4>Campaign Results</h4>
+            <ul>
+              <li>Ad Spend: ₹28,262</li>
+              <li>Revenue Generated: ₹1,52,000+</li>
+              <li>Best Campaign: ₹1,39,344 value</li>
+              <li>ROAS: 5.81x</li>
+              <li>100 Purchases | 1.18L+ Reach</li>
+            </ul>
+          </div>
+          <div class="dbox"><h4>Strategy Breakdown</h4>
+            <ul>
+              <li>Deep audience research before launch</li>
+              <li>Data-backed creative testing</li>
+              <li>Smart budget allocation by performance</li>
+              <li>Daily monitoring of cost per acquisition</li>
+              <li>Aligned ads with real buying psychology</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PROOF SCREENSHOTS -->
+        <div class="proof-section">
+          <div class="proof-title">📸 Campaign Proof — Dashboard Screenshots</div>
+          <div class="proof-grid">
+            <div class="proof-img" onclick="openImg(this)">
+              <img src="YOUR-META-ROAS-DASHBOARD-URL-1" alt="Meta ROAS Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
+              <div class="placeholder">
+                <div class="img-icon">💰</div>
+                <div class="img-label">Meta ROAS Dashboard<br><strong style="color:var(--text)">Replace with your screenshot</strong></div>
+                <div class="img-hint">Search: YOUR-META-ROAS-DASHBOARD-URL-1</div>
+              </div>
+            </div>
+            <div class="proof-img" onclick="openImg(this)">
+              <img src="YOUR-META-ROAS-DASHBOARD-URL-2" alt="Purchase Campaign Results" onload="imgLoaded(this)" onerror="imgError(this)">
+              <div class="placeholder">
+                <div class="img-icon">🛒</div>
+                <div class="img-label">Purchase Campaign Results<br><strong style="color:var(--text)">Replace with your screenshot</strong></div>
+                <div class="img-hint">Search: YOUR-META-ROAS-DASHBOARD-URL-2</div>
+              </div>
+            </div>
+          </div>
+          <div class="guide-box">
+            <h4>📌 How to add your screenshots here</h4>
+            <div class="guide-steps">
+              Upload to <strong>imgur.com</strong> → Copy image link → Open Notepad → Ctrl+F → Search <strong>YOUR-META-ROAS-DASHBOARD-URL-1</strong> → Replace → Save → Upload to GitHub ✅
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
-  <div class="case-card" onclick="toggleCase(this)">
-    <div class="case-head">
-      <div class="tags"><span class="tag tg">E-commerce</span><span class="tag tb">Meta Ads</span><span class="tag tp">3-Year Track Record</span></div>
-      <button class="tog">Details ↓</button>
+  <!-- ═══ CASE 3: REAL ESTATE LEAD GEN ═══ -->
+  <div class="cc" id="case3">
+    <div class="cc-header" onclick="toggleCase('case3')">
+      <div class="cc-top">
+        <div class="tags">
+          <span class="tag tg">Meta Ads</span>
+          <span class="tag tr">Real Estate</span>
+          <span class="tag tb">Lead Generation</span>
+        </div>
+        <button class="tog">Details ↓</button>
+      </div>
+      <div class="ctit">Real Estate Meta Campaign: 4,623+ Leads at ₹54/lead — ₹2.5L spend</div>
+      <div class="cdesc">Large-scale real estate lead generation campaign. Generated 4,623+ qualified leads at ₹54 average CPL on ₹2,50,000+ spend. Consistent increase in qualified site visits — far below industry average CPL of ₹120–₹300.</div>
+      <div class="mrow">
+        <div class="mb"><span class="mv">4,623+</span><span class="ml">Leads generated</span></div>
+        <div class="mb"><span class="mv b">₹54</span><span class="ml">Avg cost per lead</span></div>
+        <div class="mb"><span class="mv o">₹2,50,000+</span><span class="ml">Total ad spend</span></div>
+      </div>
     </div>
-    <div class="ctitle">3-Year Meta Performance: 5.57x avg ROAS, ₹4L revenue on ₹71K spend</div>
-    <div class="cdesc">Consistent Meta ad management from Feb 2023 to Mar 2026. Maintained profitable ROAS across all campaigns — ₹4,00,244 revenue on ₹71,887 spend with 2,87,236 people reached.</div>
-    <div class="mrow">
-      <div class="mbox"><span class="mval">5.57x</span><span class="mlbl">Average ROAS (3 years)</span></div>
-      <div class="mbox"><span class="mval">₹4,00,244</span><span class="mlbl">Total revenue</span></div>
-      <div class="mbox"><span class="mval b">8.48x</span><span class="mlbl">Best campaign ROAS</span></div>
-    </div>
-    <div class="cdetail">
-      <div class="dgrid">
-        <div class="dbox"><h4>Long-term Results</h4><p>Campaign 1: 91 purchases, ₹43,381 spend, 4.51x ROAS. Campaign 2: 33 purchases, ₹16,678 spend, 7.34x ROAS. Campaign 3: 10 purchases, 8.14x ROAS. All ongoing.</p></div>
-        <div class="dbox"><h4>Piggy Bank Campaign</h4><p>₹4,050 spend | 43 purchases | ₹94.20 CPA | 8.48x ROAS. High-efficiency small-budget campaign showing ability to scale profitably at all budget levels.</p></div>
-        <div class="dbox"><h4>Lead Generation</h4><p>Active lead gen campaign (Mar 2026): 20 leads at ₹41.96 per lead. 3,764 impressions, 3,093 reach. Cost-efficient B2C lead generation running alongside purchase campaigns.</p></div>
-        <div class="dbox"><h4>Overall Facebook Account</h4><p>₹63,33,330 total spend | 2.15Cr people reached | 11.69Cr impressions | 30.18L link clicks | 1,23,850 post shares. Account growing month-on-month.</p></div>
+    <div class="cd" id="case3-detail">
+      <div class="cd-inner">
+
+        <div class="qa-block">
+          <div class="qa-q">❓ Why do most real estate campaigns struggle?</div>
+          <div class="qa-a">Most developers try to fix poor results by increasing budget — but the real problem is structure. When targeting doesn't match buyer intent, and creatives don't build trust and aspiration together, the algorithm has to "guess" your audience. That's what drives costs up to ₹120–₹300 per lead.</div>
+        </div>
+        <div class="qa-block">
+          <div class="qa-q">🎯 What drove ₹54 CPL consistently?</div>
+          <div class="qa-a">Three things: (1) Targeting matched real buyer intent — not just demographics. (2) Creatives built both aspiration and trust simultaneously. (3) The follow-up system was designed to push leads toward site visits, not just form fills. Better inputs = better leads = more site visits = better sales.</div>
+        </div>
+
+        <div class="dgrid">
+          <div class="dbox"><h4>Campaign Numbers</h4>
+            <ul>
+              <li>Total Spend: ₹2,50,000+</li>
+              <li>Leads Generated: 4,623+</li>
+              <li>Avg CPL: ₹54</li>
+              <li>Industry avg CPL: ₹120–₹300</li>
+              <li>Result: 60–80% below market CPL</li>
+            </ul>
+          </div>
+          <div class="dbox"><h4>Key Success Factors</h4>
+            <ul>
+              <li>Intent-based audience targeting</li>
+              <li>Aspirational + trust-building creatives</li>
+              <li>Site visit-focused follow-up system</li>
+              <li>No complicated funnels</li>
+              <li>Algorithm-friendly campaign structure</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PROOF SCREENSHOTS -->
+        <div class="proof-section">
+          <div class="proof-title">📸 Campaign Proof — Dashboard Screenshots</div>
+          <div class="proof-grid">
+            <div class="proof-img" onclick="openImg(this)">
+              <img src="YOUR-REALESTATE-META-URL-1" alt="Real Estate Lead Gen Results" onload="imgLoaded(this)" onerror="imgError(this)">
+              <div class="placeholder">
+                <div class="img-icon">🏠</div>
+                <div class="img-label">Real Estate Lead Dashboard<br><strong style="color:var(--text)">Replace with your screenshot</strong></div>
+                <div class="img-hint">Search: YOUR-REALESTATE-META-URL-1</div>
+              </div>
+            </div>
+            <div class="proof-img" onclick="openImg(this)">
+              <img src="YOUR-REALESTATE-META-URL-2" alt="CPL Results" onload="imgLoaded(this)" onerror="imgError(this)">
+              <div class="placeholder">
+                <div class="img-icon">📉</div>
+                <div class="img-label">CPL Performance<br><strong style="color:var(--text)">Replace with your screenshot</strong></div>
+                <div class="img-hint">Search: YOUR-REALESTATE-META-URL-2</div>
+              </div>
+            </div>
+          </div>
+          <div class="guide-box">
+            <h4>📌 How to add your screenshots here</h4>
+            <div class="guide-steps">
+              Upload to <strong>imgur.com</strong> → Copy image link → Open Notepad → Ctrl+F → Search <strong>YOUR-REALESTATE-META-URL-1</strong> → Replace → Save → Upload to GitHub ✅
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
-  <div class="case-card" onclick="toggleCase(this)">
-    <div class="case-head">
-      <div class="tags"><span class="tag to">Google Ads</span><span class="tag tg">Search + YouTube</span><span class="tag tgr">All time</span></div>
-      <button class="tog">Details ↓</button>
+  <!-- ═══ CASE 4: GOOGLE ADS ═══ -->
+  <div class="cc" id="case4">
+    <div class="cc-header" onclick="toggleCase('case4')">
+      <div class="cc-top">
+        <div class="tags">
+          <span class="tag to">Google Ads</span>
+          <span class="tag tg">Search + YouTube</span>
+          <span class="coming-soon">📸 Screenshots Coming Soon</span>
+        </div>
+        <button class="tog">Details ↓</button>
+      </div>
+      <div class="ctit">Google Ads: 733K clicks, 82.1M impressions, 35,700+ conversions</div>
+      <div class="cdesc">Full Google Ads management across Search, Shopping, Display and YouTube. App install CPI reduced from ₹6.71 → ₹1.90 (72% drop). YouTube views at ₹0.02 per view. UK Fashion Shopping: 3.71x ROAS.</div>
+      <div class="mrow">
+        <div class="mb"><span class="mv o">733K</span><span class="ml">Total clicks</span></div>
+        <div class="mb"><span class="mv">35,700+</span><span class="ml">Conversions</span></div>
+        <div class="mb"><span class="mv b">₹0.02</span><span class="ml">YouTube CPV</span></div>
+      </div>
     </div>
-    <div class="ctitle">Google Ads: 733K clicks, 82.1M impressions, 35,700+ conversions</div>
-    <div class="cdesc">Full Google Ads management across Search, Shopping, Display and YouTube. Achieved massive scale with 82M+ impressions and 35.7K conversions. App install CPI optimised from ₹6.71 → ₹1.90 (72% reduction).</div>
-    <div class="mrow">
-      <div class="mbox"><span class="mval o">733K</span><span class="mlbl">Total clicks</span></div>
-      <div class="mbox"><span class="mval">35,700+</span><span class="mlbl">Total conversions</span></div>
-      <div class="mbox"><span class="mval b">₹0.02</span><span class="mlbl">YouTube CPV achieved</span></div>
-    </div>
-    <div class="cdetail">
-      <div class="dgrid">
-        <div class="dbox"><h4>Google Account Overview</h4><p>733K total clicks | 82.1M impressions | ₹1.91M conversion value | 35,700 conversions across all campaign types and accounts managed.</p></div>
-        <div class="dbox"><h4>App Install Campaign</h4><p>CPI slashed from ₹6.71 → ₹1.90 (72% reduction). 749 installs at ₹1,419.70 total cost. 74,111 impressions, 24.22% conversion rate. Exceptional efficiency for app campaigns.</p></div>
-        <div class="dbox"><h4>YouTube Campaign</h4><p>Achieved ₹0.02 per view — extremely low CPV. 77.3K impressions, 22.5K views, ₹490 total spend. Demonstrates ability to drive massive video reach on minimal budget.</p></div>
-        <div class="dbox"><h4>Shopping Campaign (UK Fashion)</h4><p>Fashion brand Google Shopping: £5.87K spend | 92 conversions | £21.8K conv value | 3.71x ROAS. Avg CPC £0.61–0.76 over 5 months (Jan–May).</p></div>
+    <div class="cd" id="case4-detail">
+      <div class="cd-inner">
+        <div class="dgrid">
+          <div class="dbox"><h4>Google Account Overview</h4><p>733K clicks | 82.1M impressions | ₹1.91M conversion value | 35,700+ conversions across Search, Shopping, Display and YouTube campaigns.</p></div>
+          <div class="dbox"><h4>App Install Campaign</h4><p>CPI cut from ₹6.71 → ₹1.90 — a 72% reduction. 749 installs at ₹1,419.70 total cost. 74,111 impressions, 24.22% conversion rate.</p></div>
+          <div class="dbox"><h4>YouTube Campaign</h4><p>22.5K views at ₹0.02 per view on only ₹490 spend. 77.3K impressions. Extremely cost-efficient video campaign delivering massive reach.</p></div>
+          <div class="dbox"><h4>UK Fashion Shopping</h4><p>£5.87K spend | 92 conversions | £21.8K conv value | 3.71x ROAS. Avg CPC £0.61–0.76 across 5 months (Jan–May).</p></div>
+        </div>
+
+        <!-- GOOGLE ADS SCREENSHOT PLACEHOLDER -->
+        <div class="proof-section">
+          <div class="proof-title">📸 Google Ads Proof — Add Your Screenshots</div>
+          <div class="proof-grid">
+            <div class="proof-img" onclick="openImg(this)">
+              <img src="YOUR-GOOGLE-ADS-DASHBOARD-URL-1" alt="Google Ads Overview" onload="imgLoaded(this)" onerror="imgError(this)">
+              <div class="placeholder">
+                <div class="img-icon" style="font-size:28px">G</div>
+                <div class="img-label">Google Ads Dashboard<br><strong style="color:var(--orange)">Add your Google screenshot</strong></div>
+                <div class="img-hint">Search: YOUR-GOOGLE-ADS-DASHBOARD-URL-1</div>
+              </div>
+            </div>
+            <div class="proof-img" onclick="openImg(this)">
+              <img src="YOUR-GOOGLE-ADS-DASHBOARD-URL-2" alt="Google Ads Conversions" onload="imgLoaded(this)" onerror="imgError(this)">
+              <div class="placeholder">
+                <div class="img-icon" style="font-size:28px">G</div>
+                <div class="img-label">Conversion Results<br><strong style="color:var(--orange)">Add your Google screenshot</strong></div>
+                <div class="img-hint">Search: YOUR-GOOGLE-ADS-DASHBOARD-URL-2</div>
+              </div>
+            </div>
+          </div>
+          <div class="guide-box">
+            <h4>📌 Add your Google Ads screenshots here</h4>
+            <div class="guide-steps">
+              Upload to <strong>imgur.com</strong> → Copy link → Ctrl+F → Search <strong>YOUR-GOOGLE-ADS-DASHBOARD-URL-1</strong> → Paste your link → Save → Upload to GitHub ✅
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="case-card" onclick="toggleCase(this)">
-    <div class="case-head">
-      <div class="tags"><span class="tag tg">Large Scale</span><span class="tag tb">Meta Ads</span><span class="tag to">₹47L+ Spend</span></div>
-      <button class="tog">Details ↓</button>
+  <!-- ═══ CASE 5: LINKEDIN ADS ═══ -->
+  <div class="cc" id="case5">
+    <div class="cc-header" onclick="toggleCase('case5')">
+      <div class="cc-top">
+        <div class="tags">
+          <span class="tag tp">LinkedIn Ads</span>
+          <span class="tag tb">B2B</span>
+          <span class="coming-soon">📸 Screenshots Coming Soon</span>
+        </div>
+        <button class="tog">Details ↓</button>
+      </div>
+      <div class="ctit">LinkedIn Ads: B2B Lead Generation &amp; Account-Based Marketing</div>
+      <div class="cdesc">B2B LinkedIn campaigns using Matched Audiences, Lead Gen Forms and Sponsored Content. Targeted decision-makers by job title, company size and industry — delivering qualified leads for clients in competitive B2B markets.</div>
+      <div class="mrow">
+        <div class="mb"><span class="mv p">B2B</span><span class="ml">Lead generation focus</span></div>
+        <div class="mb"><span class="mv b">ABM</span><span class="ml">Account-based targeting</span></div>
+        <div class="mb"><span class="mv">CPL</span><span class="ml">Optimised cost per lead</span></div>
+      </div>
     </div>
-    <div class="ctitle">Enterprise Meta account: ₹47.3L spend, 40.9M reach, 9,763 ad sets</div>
-    <div class="cdesc">Managed one of the largest Meta accounts — 9,763 ad sets across all campaigns. ₹4,736,521 total spend with 40.9M people reached and 10.3Cr impressions. Consistent purchase delivery across all active campaigns.</div>
-    <div class="mrow">
-      <div class="mbox"><span class="mval o">₹47.3L</span><span class="mlbl">Total spend managed</span></div>
-      <div class="mbox"><span class="mval">40.9M</span><span class="mlbl">Total reach</span></div>
-      <div class="mbox"><span class="mval b">9,763</span><span class="mlbl">Ad sets managed</span></div>
-    </div>
-    <div class="cdetail">
-      <div class="dgrid">
-        <div class="dbox"><h4>Scale</h4><p>9,763 ad sets | ₹4,736,521.42 total spend | 40,928,511 impressions | 10,328,507 people reached. Enterprise-level Meta account management across multiple brands.</p></div>
-        <div class="dbox"><h4>Active Campaign Results</h4><p>CPA: ₹500–₹830 per purchase. Per-ad-set spend: ₹11,593–₹18,286. Results from 12 ad sets: 213 purchases | 4,94,463 people | 10,58,524 impressions | ₹501.44 avg CPA.</p></div>
-        <div class="dbox"><h4>Multi-brand Traffic Campaigns</h4><p>Amazon Traffic, Truveda Skincare Delhi, Truveda Oil India, Website Conversions. 15 campaigns | 3,32,094 reach | 4,36,465 impressions | ₹35,906 total spend.</p></div>
-        <div class="dbox"><h4>BBCream Campaign</h4><p>4 active ad sets | 73,825–97,784 reach per set | ₹500–₹830 CPA | ₹11,593–₹18,286 spend each. Consistent purchase delivery at scale with tight CPA control.</p></div>
+    <div class="cd" id="case5-detail">
+      <div class="cd-inner">
+        <div class="dgrid">
+          <div class="dbox"><h4>LinkedIn Strategy</h4><p>Used Matched Audiences from CRM to retarget warm prospects. Lead Gen Forms for frictionless lead capture. Sponsored Content for awareness among cold ICP audiences.</p></div>
+          <div class="dbox"><h4>Targeting Approach</h4><p>Segmented by job title, seniority, company size and industry. Separate campaigns for cold, warm and retargeting audiences — each with distinct messaging and offers.</p></div>
+        </div>
+
+        <!-- LINKEDIN SCREENSHOT PLACEHOLDER -->
+        <div class="proof-section">
+          <div class="proof-title">📸 LinkedIn Ads Proof — Add Your Screenshots</div>
+          <div class="proof-grid">
+            <div class="proof-img" onclick="openImg(this)">
+              <img src="YOUR-LINKEDIN-ADS-URL-1" alt="LinkedIn Campaign Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
+              <div class="placeholder">
+                <div class="img-icon" style="font-size:24px;color:#0a66c2">in</div>
+                <div class="img-label">LinkedIn Campaign Manager<br><strong style="color:var(--purple)">Add your LinkedIn screenshot</strong></div>
+                <div class="img-hint">Search: YOUR-LINKEDIN-ADS-URL-1</div>
+              </div>
+            </div>
+            <div class="proof-img" onclick="openImg(this)">
+              <img src="YOUR-LINKEDIN-ADS-URL-2" alt="LinkedIn Lead Results" onload="imgLoaded(this)" onerror="imgError(this)">
+              <div class="placeholder">
+                <div class="img-icon" style="font-size:24px;color:#0a66c2">in</div>
+                <div class="img-label">Lead Gen Form Results<br><strong style="color:var(--purple)">Add your LinkedIn screenshot</strong></div>
+                <div class="img-hint">Search: YOUR-LINKEDIN-ADS-URL-2</div>
+              </div>
+            </div>
+          </div>
+          <div class="guide-box">
+            <h4>📌 Add your LinkedIn Ads screenshots here</h4>
+            <div class="guide-steps">
+              Upload to <strong>imgur.com</strong> → Copy link → Ctrl+F → Search <strong>YOUR-LINKEDIN-ADS-URL-1</strong> → Paste your link → Save → Upload to GitHub ✅
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
 </section>
 
-<section id="clients" class="section">
-  <div class="sec-title"><div class="sec-icon ig">🌍</div>Clients — International &amp; National</div>
+<!-- CLIENTS -->
+<section id="clients" class="sec">
+  <div class="sec-title"><div class="sico ig">🌍</div>Clients — International &amp; National</div>
   <div class="cligrid">
     <div class="clicard"><div class="cdot" style="background:#58a6ff"></div><div><div class="cname">Infinity Fitness</div><div class="cloc">UAE 🇦🇪</div></div></div>
     <div class="clicard"><div class="cdot" style="background:#3fb950"></div><div><div class="cname">Travel Door</div><div class="cloc">Georgia 🇬🇪</div></div></div>
@@ -293,11 +635,12 @@ h1{font-family:var(--font-h);font-size:clamp(30px,5vw,50px);font-weight:800;line
   </div>
 </section>
 
-<section id="skills" class="section">
-  <div class="sec-title"><div class="sec-icon io">⚡</div>Skills &amp; Channel Expertise</div>
+<!-- SKILLS -->
+<section id="skills" class="sec">
+  <div class="sec-title"><div class="sico io">⚡</div>Skills &amp; Channel Expertise</div>
   <div class="chgrid">
     <div class="chcard"><div class="chlogo lg">G</div><div class="chname">Google Ads</div><div class="chsk">Search, Shopping, Performance Max, Display, YouTube, App Campaigns, Smart Bidding, Negative Keywords</div></div>
-    <div class="chcard"><div class="chlogo lm">f</div><div class="chname">Meta Ads</div><div class="chsk">Advantage+, ASC, Catalogue Ads, Retargeting, Lookalike, CAPI, Creative Testing, A/B Testing, Lead Gen</div></div>
+    <div class="chcard"><div class="chlogo lm">f</div><div class="chname">Meta Ads</div><div class="chsk">Advantage+, ASC, Catalogue, Retargeting, Lookalike, CAPI, Creative Testing, A/B Testing, Lead Gen Forms</div></div>
     <div class="chcard"><div class="chlogo ll">in</div><div class="chname">LinkedIn Ads</div><div class="chsk">Matched Audiences, Lead Gen Forms, Sponsored Content, Account-Based Marketing, B2B Targeting</div></div>
   </div>
   <div style="margin-bottom:10px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em">Tools &amp; Platforms</div>
@@ -305,46 +648,53 @@ h1{font-family:var(--font-h);font-size:clamp(30px,5vw,50px);font-weight:800;line
     <span class="tool">GA4</span><span class="tool">Looker Studio</span><span class="tool">Meta Business Suite</span>
     <span class="tool">Google Tag Manager</span><span class="tool">Fanpage Karma</span><span class="tool">HubSpot</span>
     <span class="tool">Klaviyo</span><span class="tool">Semrush</span><span class="tool">Hotjar</span>
-    <span class="tool">Triple Whale</span><span class="tool">Unbounce</span><span class="tool">Email Marketing</span>
-    <span class="tool">Lead Generation</span><span class="tool">Zapier</span>
+    <span class="tool">Triple Whale</span><span class="tool">Unbounce</span><span class="tool">Zapier</span>
+    <span class="tool">Email Marketing</span><span class="tool">Lead Generation</span>
   </div>
 </section>
 
-<section class="section">
-  <div class="sec-title"><div class="sec-icon ip">🏆</div>Certifications</div>
+<!-- CERTIFICATIONS -->
+<section class="sec">
+  <div class="sec-title"><div class="sico ip">🏆</div>Certifications</div>
   <div class="certwrap">
     <div class="cert"><div class="certdot" style="background:#ea5a40"></div>Google Ads Certified</div>
     <div class="cert"><div class="certdot" style="background:#1877f2"></div>Meta Blueprint</div>
     <div class="cert"><div class="certdot" style="background:#0a66c2"></div>LinkedIn Marketing Labs</div>
     <div class="cert"><div class="certdot" style="background:#fbbc05"></div>Google Analytics 4</div>
     <div class="cert"><div class="certdot" style="background:#ff7a59"></div>HubSpot Marketing</div>
-    <div class="cert"><div class="certdot" style="background:#3fb950"></div>Performance Marketing Specialist</div>
   </div>
 </section>
 
-<section id="contact" class="section">
+<!-- CONTACT -->
+<section id="contact" class="sec">
   <div class="contact-box">
     <h2>Let's work together</h2>
-    <p>Open to full-time roles, freelance projects &amp; consulting.<br>Based in India — available for remote &amp; on-site opportunities.</p>
+    <p>Open to full-time roles, freelance projects &amp; consulting.<br>Based in India — available remote &amp; on-site.</p>
     <div class="cbtns">
-      <a href="mailto:abhisheklakhanpal13@gmail.com" class="btn btn-p">✉ Send Email</a>
+      <a href="/cdn-cgi/l/email-protection#0766656f6e746f626c6b666c6f666977666b363447606a666e6b2964686a" class="btn btn-p">✉ Send Email</a>
       <a href="https://wa.me/918375994314" target="_blank" class="btn btn-s">💬 WhatsApp</a>
-      <a href="https://linkedin.com/in/abhisheksharmdr13" target="_blank" class="btn btn-s">in LinkedIn</a>
+      <a href="https://www.linkedin.com/in/abhishekdr13/" target="_blank" class="btn btn-s">in LinkedIn</a>
     </div>
     <div class="cinfo">
-      <span>📞 <a href="tel:+918375994314">+91 83 759 94314</a></span>
-      <span>✉ <a href="mailto:abhisheklakhanpal13@gmail.com">abhisheklakhanpal13@gmail.com</a></span>
+      <a href="tel:+918375994314">📞 +91 83 759 94314</a>
+      <a href="/cdn-cgi/l/email-protection#5f3e3d37362c373a34333e34373e312f3e336e6c1f38323e3633713c3032">✉ <span class="__cf_email__" data-cfemail="0362616b6a706b66686f62686b626d73626f323043646e626a6f2d606c6e">[email&#160;protected]</span></a>
     </div>
   </div>
 </section>
 
 </div>
-<script>
-function toggleCase(card){
-  const d=card.querySelector('.cdetail'),b=card.querySelector('.tog'),o=card.classList.contains('open');
-  document.querySelectorAll('.case-card').forEach(c=>{c.classList.remove('open');c.querySelector('.cdetail').classList.remove('open');c.querySelector('.tog').textContent='Details ↓';});
-  if(!o){card.classList.add('open');d.classList.add('open');b.textContent='Close ↑';card.scrollIntoView({behavior:'smooth',block:'nearest'});}
-}
-</script>
-</body>
-</html>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleCase(id) {
+  const card = document.getElementById(id);
+  const detail = document.getElementById(id+'-detail');
+  const btn = card.querySelector('.tog');
+  const isOpen = card.classList.contains('open');
+  document.querySelectorAll('.cc').forEach(c=>c.classList.remove('open'));
+  document.querySelectorAll('.cd').forEach(d=>d.classList.remove('open'));
+  document.querySelectorAll('.tog').forEach(b=>b.textContent='Details ↓');
+  if(!isOpen){
+    card.classList.add('open');
+    detail.classList.add('open');
+    btn.textContent='Close ↑';
+    card.scrollIntoView({behavior:'smo
