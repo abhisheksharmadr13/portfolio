@@ -63,12 +63,12 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
 .btn-s:hover{background:var(--bg4);text-decoration:none}
 
 /* STATS */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:48px;background:var(--bg2)}
-.si{padding:18px 12px;text-align:center;border-right:1px solid var(--border)}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:48px}
+.si{padding:32px 20px;text-align:center;background:var(--bg2)}
 .si:last-child{border-right:none}
-.sn{font-family:var(--fh);font-size:22px;font-weight:800;letter-spacing:-.02em;display:block}
-.sn.a{color:var(--accent)}.sn.g{color:var(--green)}.sn.o{color:var(--orange)}.sn.p{color:var(--purple)}
-.sl{font-size:11px;color:var(--muted);margin-top:3px}
+.sn{font-family:var(--fh);font-size:clamp(36px,5vw,56px);font-weight:800;letter-spacing:-.03em;display:block;line-height:1}
+.sn.a{color:#58a6ff}.sn.g{color:#3fb950}.sn.o{color:#d29922}.sn.p{color:#bc8cff}
+.sl{font-size:13px;color:var(--muted);margin-top:10px;font-weight:400}
 
 /* SECTION */
 .sec{margin-bottom:48px}
@@ -181,7 +181,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
 .guide-steps span{color:var(--text)}
 
 @media(max-width:600px){
-  .stats{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(1,1fr)}
   .cligrid{grid-template-columns:repeat(2,1fr)}
   .chgrid{grid-template-columns:1fr 1fr}
   .mrow{grid-template-columns:1fr 1fr}
@@ -216,7 +216,6 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
   <div class="cta">
     <a href="/cdn-cgi/l/email-protection#5f3e3d37362c373a34333e34373e312f3e336e6c1f38323e3633713c3032" class="btn btn-p">✉ Get in touch</a>
     <a href="https://wa.me/918375994314" target="_blank" class="btn btn-s">💬 WhatsApp</a>
-    <a href="https://abhisheksharmadr13.wixsite.com/portfolio" target="_blank" class="btn btn-s">↗ Wix Portfolio</a>
   </div>
 </section>
 
@@ -291,7 +290,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
           <div class="proof-grid">
             <!-- IMAGE 1: Replace YOUR-META-DASHBOARD-URL with your actual image URL -->
             <div class="proof-img" onclick="openImg(this)">
-              <img src="https://github.com/abhisheksharmadr13/portfolio/blob/5106368585de84914769e2ac3fd1da473cb842d3/meta%20ads%201.jpeg" alt="Meta Lead Gen Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
+              <img src="https://raw.githubusercontent.com/abhisheksharmadr13/portfolio/main/meta%20ads%201.jpeg" alt="Meta Lead Gen Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
               <div class="placeholder">
                 <div class="img-icon">📊</div>
                 <div class="img-label">Meta Leads Dashboard<br><strong style="color:var(--text)">Replace with your screenshot</strong></div>
@@ -300,7 +299,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
             </div>
             <!-- IMAGE 2 -->
             <div class="proof-img" onclick="openImg(this)">
-              <img src="https://github.com/abhisheksharmadr13/portfolio/blob/5106368585de84914769e2ac3fd1da473cb842d3/meta%20ads%201.jpeg" alt="Meta Ad Set Results" onload="imgLoaded(this)" onerror="imgError(this)">
+              <img src="https://raw.githubusercontent.com/abhisheksharmadr13/portfolio/main/meta%20ads%201.jpeg" alt="Meta Ad Set Results" onload="imgLoaded(this)" onerror="imgError(this)">
               <div class="placeholder">
                 <div class="img-icon">📈</div>
                 <div class="img-label">Ad Set Performance<br><strong style="color:var(--text)">Replace with your screenshot</strong></div>
@@ -316,7 +315,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
               <span>Step 1:</span> Go to <strong>imgur.com</strong> → Upload your Meta screenshot<br>
               <span>Step 2:</span> Right-click the uploaded image → <strong>"Copy image address"</strong><br>
               <span>Step 3:</span> Open this file in Notepad → Press <strong>Ctrl+F</strong><br>
-              <span>Step 4:</span> Search for <strong>https://github.com/abhisheksharmadr13/portfolio/blob/5106368585de84914769e2ac3fd1da473cb842d3/meta%20ads%201.jpeg</strong><br>
+              <span>Step 4:</span> Search for <strong>https://raw.githubusercontent.com/abhisheksharmadr13/portfolio/main/meta%20ads%201.jpeg</strong><br>
               <span>Step 5:</span> Replace it with your Imgur link → Save → Upload to GitHub ✅
             </div>
           </div>
