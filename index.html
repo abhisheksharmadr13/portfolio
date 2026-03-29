@@ -683,7 +683,21 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
 
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+function imgLoaded(img){
+  img.classList.add('loaded');
+  var ph = img.nextElementSibling;
+  if(ph) ph.classList.add('hidden');
+}
+function imgError(img){
+  img.style.display='none';
+}
+function openImg(div){
+  var img=div.querySelector('img');
+  if(img && img.classList.contains('loaded')){
+    window.open(img.src,'_blank');
+  }
+}
 function toggleCase(id) {
   const card = document.getElementById(id);
   const detail = document.getElementById(id+'-detail');
