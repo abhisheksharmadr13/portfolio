@@ -6,6 +6,14 @@
 <title>Abhishek Sharma | Performance Marketer</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+/*
+=======================================================
+  TO ADD YOUR SCREENSHOTS:
+  Scroll to the bottom of this file to find
+  "IMAGE URLS - EDIT HERE" section.
+  Replace each URL with your GitHub Raw image URL.
+=======================================================
+*/
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--bg4:#30363d;
@@ -18,12 +26,16 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:15px
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 .wrap{max-width:920px;margin:0 auto;padding:0 20px 80px}
+
+/* NAV */
 nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:48px;position:sticky;top:0;background:rgba(13,17,23,.96);backdrop-filter:blur(8px);z-index:100}
 .nav-brand{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:700;font-size:15px;color:var(--text)}
 .av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#58a6ff,#bc8cff);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff}
 .nav-links{display:flex;gap:4px;list-style:none}
 .nav-links a{color:var(--muted);font-size:13px;padding:6px 12px;border-radius:6px;transition:all .15s;text-decoration:none}
 .nav-links a:hover{color:var(--text);background:var(--bg3)}
+
+/* HERO */
 .hero{margin-bottom:48px}
 .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.3);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--green);margin-bottom:20px}
 .bdot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
@@ -37,21 +49,27 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
 .btn-p:hover{background:#3aa84a;text-decoration:none}
 .btn-s{background:var(--bg3);color:var(--text);border-color:var(--border2)}
 .btn-s:hover{background:var(--bg4);text-decoration:none}
+
+/* STATS - simple clean font */
 .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:48px}
-.si{padding:32px 20px;text-align:center;background:var(--bg2)}
-.sn{font-family:var(--fh);font-size:clamp(36px,5vw,56px);font-weight:800;letter-spacing:-.03em;display:block;line-height:1}
+.si{padding:28px 20px;text-align:center;background:var(--bg2)}
+.sn{font-family:var(--fb);font-size:clamp(28px,4vw,42px);font-weight:500;display:block;line-height:1}
 .sn.a{color:#58a6ff}.sn.g{color:#3fb950}.sn.o{color:#d29922}.sn.p{color:#bc8cff}
 .sl{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* SECTION */
 .sec{margin-bottom:48px}
 .sec-title{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)}
 .sico{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px}
 .ib{background:rgba(88,166,255,.15)}.ig{background:rgba(63,185,80,.15)}.io{background:rgba(210,153,34,.15)}.ip{background:rgba(188,140,255,.15)}
-.cc{background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;transition:border-color .2s;position:relative}
-.cc:hover{border-color:var(--border2)}
+
+/* CASE CARDS */
+.cc{background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;position:relative}
 .cc.open{border-color:var(--accent)}
 .cc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);opacity:0;transition:opacity .2s}
 .cc.open::before{opacity:1}
-.cc-header{padding:22px;cursor:pointer;user-select:none}
+.cc-header{padding:22px;cursor:pointer;user-select:none;transition:background .15s}
+.cc-header:hover{background:rgba(255,255,255,.02)}
 .cc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
 .tags{display:flex;gap:6px;flex-wrap:wrap}
 .tag{font-size:11px;padding:2px 8px;border-radius:20px;border:1px solid}
@@ -60,48 +78,53 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
 .to{color:var(--orange);border-color:rgba(210,153,34,.3);background:rgba(210,153,34,.08)}
 .tp{color:var(--purple);border-color:rgba(188,140,255,.3);background:rgba(188,140,255,.08)}
 .tr{color:var(--red);border-color:rgba(248,81,73,.3);background:rgba(248,81,73,.08)}
-.tgr{color:var(--muted);border-color:var(--border);background:var(--bg3)}
-.cs{display:inline-flex;align-items:center;gap:6px;background:rgba(210,153,34,.1);border:1px solid rgba(210,153,34,.3);border-radius:20px;padding:3px 10px;font-size:11px;color:var(--orange)}
-.tog{font-size:11px;color:var(--muted);background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;white-space:nowrap;font-family:var(--fb);flex-shrink:0;pointer-events:none}
+.cs{display:inline-flex;align-items:center;gap:4px;background:rgba(210,153,34,.1);border:1px solid rgba(210,153,34,.3);border-radius:20px;padding:2px 8px;font-size:11px;color:var(--orange)}
+.tog{font-size:11px;color:var(--muted);background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;cursor:pointer;white-space:nowrap;font-family:var(--fb);flex-shrink:0;transition:all .15s}
+.tog:hover{color:var(--text);border-color:var(--border2)}
 .ctit{font-family:var(--fh);font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.3}
 .cdesc{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.6}
 .mrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .mb{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px}
-.mv{font-family:var(--fh);font-size:19px;font-weight:700;color:var(--green);display:block;letter-spacing:-.02em}
+.mv{font-family:var(--fb);font-size:20px;font-weight:500;color:var(--green);display:block}
 .mv.b{color:var(--accent)}.mv.o{color:var(--orange)}.mv.p{color:var(--purple)}
 .ml{font-size:11px;color:var(--muted);margin-top:2px}
-.cd{display:none;border-top:1px solid var(--border)}
+
+/* CASE DETAIL - always below, toggle show/hide */
+.cd{display:none;border-top:1px solid var(--border);padding:24px}
 .cd.open{display:block}
-.cd-inner{padding:24px}
-.qa-block{background:var(--bg3);border-radius:8px;padding:16px;margin-bottom:12px}
-.qa-q{font-size:13px;color:var(--accent);font-weight:500;margin-bottom:6px}
+
+/* Q&A */
+.qa{background:var(--bg3);border-radius:8px;padding:14px;margin-bottom:10px}
+.qa-q{font-size:13px;color:var(--accent);font-weight:500;margin-bottom:4px}
 .qa-a{font-size:13px;color:var(--text);line-height:1.6}
-.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+
+/* DETAIL GRID */
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
 .dbox{background:var(--bg3);border-radius:8px;padding:14px}
 .dbox h4{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;font-weight:500}
-.dbox p,.dbox ul{font-size:13px;color:var(--text);line-height:1.6}
-.dbox ul{padding-left:16px;line-height:1.8}
-.proof-section{margin-top:20px}
-.proof-title{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px;font-weight:500}
-.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.proof-img{border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--bg3);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;cursor:pointer;transition:border-color .2s;position:relative}
-.proof-img:hover{border-color:var(--border2)}
-.proof-img img{width:100%;height:100%;object-fit:cover;display:none}
-.proof-img img.loaded{display:block}
-.ph{display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px;text-align:center}
-.ph.hidden{display:none}
-.ph-icon{font-size:24px;opacity:.4}
-.ph-label{font-size:12px;color:var(--muted);line-height:1.4}
-.guide-box{background:rgba(88,166,255,.05);border:1px solid rgba(88,166,255,.2);border-radius:8px;padding:14px;margin-top:12px}
-.guide-box h4{font-size:12px;color:var(--accent);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em}
-.guide-steps{font-size:12px;color:var(--muted);line-height:1.8}
-.guide-steps strong{color:var(--text)}
+.dbox ul{font-size:13px;color:var(--text);line-height:1.8;padding-left:16px}
+.dbox p{font-size:13px;color:var(--text);line-height:1.6}
+
+/* SCREENSHOT - ONE SLOT ONLY */
+.proof-wrap{margin-top:16px;background:var(--bg3);border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.proof-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:12px 14px;border-bottom:1px solid var(--border);font-weight:500}
+.proof-img-wrap{position:relative;width:100%;background:var(--bg);min-height:200px;display:flex;align-items:center;justify-content:center}
+.proof-img-wrap img{width:100%;display:none;border-radius:0}
+.proof-img-wrap img.loaded{display:block}
+.proof-placeholder{padding:32px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+.proof-placeholder.hidden{display:none}
+.pp-icon{font-size:28px;opacity:.35}
+.pp-text{font-size:12px;color:var(--muted);line-height:1.5}
+
+/* CLIENTS */
 .cligrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .clicard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;display:flex;align-items:center;gap:10px;transition:border-color .15s}
 .clicard:hover{border-color:var(--border2)}
 .cdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .cname{font-size:13px;font-weight:500;color:var(--text)}
 .cloc{font-size:11px;color:var(--muted)}
+
+/* SKILLS */
 .chgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
 .chcard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:18px;transition:border-color .15s}
 .chcard:hover{border-color:var(--border2)}
@@ -113,18 +136,46 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
 .chsk{font-size:12px;color:var(--muted);line-height:1.6}
 .tools{display:flex;flex-wrap:wrap;gap:8px}
 .tool{font-size:12px;padding:4px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;color:var(--muted)}
+
+/* CERTIFICATIONS - clickable chips */
 .certwrap{display:flex;flex-wrap:wrap;gap:10px}
-.cert{display:flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:13px}
-.certdot{width:8px;height:8px;border-radius:50%}
-.contact-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:36px;text-align:center}
-.contact-box h2{font-family:var(--fh);font-size:24px;font-weight:700;margin-bottom:8px}
-.contact-box p{color:var(--muted);font-size:14px;margin-bottom:24px}
-.cbtns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-.cinfo{display:flex;justify-content:center;gap:24px;margin-top:18px;flex-wrap:wrap}
+.cert-link{display:flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;font-size:13px;color:var(--text);text-decoration:none;transition:all .15s;cursor:pointer}
+.cert-link:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.cert-link:hover .certdot{transform:scale(1.3)}
+.certdot{width:8px;height:8px;border-radius:50%;transition:transform .15s}
+.cert-arrow{font-size:10px;color:var(--muted);margin-left:2px}
+
+/* CONTACT FORM */
+.contact-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:36px}
+.contact-top{text-align:center;margin-bottom:28px}
+.contact-top h2{font-family:var(--fh);font-size:24px;font-weight:700;margin-bottom:8px}
+.contact-top p{color:var(--muted);font-size:14px;margin-bottom:20px}
+.cbtns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.cinfo{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
 .cinfo a{font-size:13px;color:var(--accent)}
+.divider{display:flex;align-items:center;gap:12px;margin:24px 0}
+.divider-line{flex:1;height:1px;background:var(--border)}
+.divider-text{font-size:12px;color:var(--muted);white-space:nowrap}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.form-group input,.form-group textarea,.form-group select{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:var(--fb);outline:none;transition:border-color .15s;width:100%}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-group select option{background:var(--bg3);color:var(--text)}
+.form-full{grid-column:1/-1}
+.submit-btn{width:100%;padding:12px;background:var(--green);color:#0d1117;border:none;border-radius:8px;font-size:15px;font-weight:500;font-family:var(--fb);cursor:pointer;transition:background .15s;margin-top:4px}
+.submit-btn:hover{background:#3aa84a}
+.form-success{display:none;text-align:center;padding:20px;background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.3);border-radius:8px;color:var(--green);font-size:14px}
+.schedule-box{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:center;margin-top:14px}
+.schedule-box h4{font-size:15px;font-weight:500;margin-bottom:6px}
+.schedule-box p{font-size:13px;color:var(--muted);margin-bottom:14px}
+.schedule-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:transparent;border:1px solid var(--accent);color:var(--accent);border-radius:8px;font-size:14px;font-family:var(--fb);cursor:pointer;transition:all .15s;text-decoration:none}
+.schedule-btn:hover{background:rgba(88,166,255,.1);text-decoration:none}
+
 @media(max-width:600px){
   .stats,.cligrid{grid-template-columns:repeat(2,1fr)}
-  .chgrid,.mrow,.dgrid,.proof-grid{grid-template-columns:1fr}
+  .chgrid,.mrow,.dgrid,.form-grid{grid-template-columns:1fr}
   .nav-links{display:none}
 }
 </style>
@@ -132,6 +183,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
 <body>
 <div class="wrap">
 
+<!-- NAV -->
 <nav>
   <div class="nav-brand"><div class="av">AS</div>Abhishek Sharma</div>
   <ul class="nav-links">
@@ -142,6 +194,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="badge"><div class="bdot"></div>Available for new projects</div>
   <h1>Abhishek Sharma<br><span class="ca">Performance</span> &amp; <span class="cg">Growth Marketer</span></h1>
@@ -153,6 +206,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
   </div>
 </section>
 
+<!-- STATS - clean simple font -->
 <div class="stats">
   <div class="si"><span class="sn a">&#x20B9;63L+</span><span class="sl">Meta spend managed</span></div>
   <div class="si"><span class="sn g">10.11x</span><span class="sl">Peak ROAS achieved</span></div>
@@ -160,10 +214,11 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
   <div class="si"><span class="sn p">35,700+</span><span class="sl">Google conversions</span></div>
 </div>
 
+<!-- CASE STUDIES -->
 <section id="work" class="sec">
   <div class="sec-title"><div class="sico ib">&#128202;</div>Case Studies</div>
 
-  <!-- CASE 1 -->
+  <!-- CASE 1: META LEAD GEN -->
   <div class="cc" id="case1">
     <div class="cc-header">
       <div class="cc-top">
@@ -175,7 +230,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
         <button class="tog" id="btn-case1">Details &#8595;</button>
       </div>
       <div class="ctit">Meta Lead Gen: 1,098+ Leads at &#x20B9;49-50/lead using Tier-Based Targeting</div>
-      <div class="cdesc">Structured Meta lead generation campaign using smart tier audience segmentation. Delivered 1,098+ leads with cost per lead as low as &#x20B9;49-50 on &#x20B9;1,55,932 spend across 8,81,024 impressions.</div>
+      <div class="cdesc">Structured Meta lead generation using smart tier audience segmentation. Delivered 1,098+ leads at &#x20B9;49-50 CPL on &#x20B9;1,55,932 spend across 8,81,024 impressions.</div>
       <div class="mrow">
         <div class="mb"><span class="mv">1,098+</span><span class="ml">Total leads generated</span></div>
         <div class="mb"><span class="mv b">&#x20B9;49-50</span><span class="ml">Cost per lead</span></div>
@@ -183,41 +238,32 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
       </div>
     </div>
     <div class="cd" id="case1-detail">
-      <div class="cd-inner">
-        <div class="qa-block">
-          <div class="qa-q">What was the core challenge?</div>
-          <div class="qa-a">The client needed high volume quality leads at a controlled cost. Most advertisers struggle at &#x20B9;120-300 per lead. The goal was to bring CPL below &#x20B9;60 while maintaining lead quality through smart audience structure.</div>
-        </div>
-        <div class="qa-block">
-          <div class="qa-q">What strategy was used?</div>
-          <div class="qa-a">Tier-based audience segmentation — Tier 1, Tier 400, and Tier 500 campaigns. Each tier had its own budget cap, creative, and optimization logic. Winning ad sets were scaled; underperformers were paused immediately.</div>
-        </div>
-        <div class="dgrid">
-          <div class="dbox"><h4>Campaign Results</h4><ul><li>Total Spend: &#x20B9;1,55,932.80</li><li>Impressions: 8,81,024</li><li>Reach: 2,83,024+</li><li>Leads: 1,098+</li><li>CPL: &#x20B9;49-50 per lead</li></ul></div>
-          <div class="dbox"><h4>What Worked</h4><ul><li>Tier-based audience segmentation</li><li>Daily budget caps per tier</li><li>CPL-based continuous optimization</li><li>Scale winners, pause losers fast</li><li>Structured testing before scaling</li></ul></div>
-        </div>
-        <div class="proof-section">
-          <div class="proof-title">Campaign Proof — Dashboard Screenshots</div>
-          <div class="proof-grid">
-            <div class="proof-img">
-              <img src="https://raw.githubusercontent.com/abhisheksharmadr13/portfolio/main/metaads1.jpeg" alt="Meta Lead Gen Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
-              <div class="ph"><div class="ph-icon">&#128202;</div><div class="ph-label">Meta Leads Dashboard<br><strong>Your screenshot loads here</strong></div></div>
-            </div>
-            <div class="proof-img">
-              <img src="https://raw.githubusercontent.com/abhisheksharmadr13/portfolio/main/metaads1.jpeg" alt="Meta Ad Set Results" onload="imgLoaded(this)" onerror="imgError(this)">
-              <div class="ph"><div class="ph-icon">&#128200;</div><div class="ph-label">Ad Set Performance<br><strong>Upload more screenshots to GitHub</strong></div></div>
-            </div>
-          </div>
-          <div class="guide-box">
-            <h4>How to add more screenshots</h4>
-            <div class="guide-steps">Go to your GitHub repo &#8594; <strong>Add file &#8594; Upload files</strong> &#8594; upload screenshot &#8594; click the file &#8594; copy the <strong>Raw URL</strong> &#8594; send it to me and I will update the portfolio</div>
+      <div class="qa">
+        <div class="qa-q">What was the core challenge?</div>
+        <div class="qa-a">The client needed high-volume quality leads at a controlled cost. Most advertisers struggle at &#x20B9;120-300 per lead. The goal was to bring CPL below &#x20B9;60 while maintaining lead quality through smart audience structure.</div>
+      </div>
+      <div class="qa">
+        <div class="qa-q">What strategy was used?</div>
+        <div class="qa-a">Tier-based audience segmentation — Tier 1, Tier 400, and Tier 500 campaigns. Each tier had its own budget cap, creative, and optimization logic. Winning ad sets were scaled; underperformers were paused immediately based on daily CPL signals.</div>
+      </div>
+      <div class="dgrid">
+        <div class="dbox"><h4>Campaign Results</h4><ul><li>Total Spend: &#x20B9;1,55,932.80</li><li>Impressions: 8,81,024</li><li>Reach: 2,83,024+</li><li>Leads: 1,098+</li><li>CPL: &#x20B9;49-50 per lead</li></ul></div>
+        <div class="dbox"><h4>What Worked</h4><ul><li>Tier-based audience segmentation</li><li>Daily budget caps per tier</li><li>CPL-based continuous optimization</li><li>Scale winners, pause losers fast</li><li>Structured testing before scaling</li></ul></div>
+      </div>
+      <div class="proof-wrap">
+        <div class="proof-label">&#128247; Campaign Proof — Dashboard Screenshot</div>
+        <div class="proof-img-wrap">
+          <img id="img-case1" src="" alt="Meta Lead Gen Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
+          <div class="proof-placeholder" id="ph-case1">
+            <div class="pp-icon">&#128202;</div>
+            <div class="pp-text">Meta dashboard screenshot will appear here<br>See image URL section below to add yours</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- CASE 2 -->
+  <!-- CASE 2: META ROAS -->
   <div class="cc" id="case2">
     <div class="cc-header">
       <div class="cc-top">
@@ -229,7 +275,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
         <button class="tog" id="btn-case2">Details &#8595;</button>
       </div>
       <div class="ctit">Meta E-commerce: &#x20B9;28K spend &#8594; &#x20B9;1.52L+ revenue — 5.81x ROAS, 100 purchases</div>
-      <div class="cdesc">Turned &#x20B9;28,262 in ad spend into &#x20B9;1,52,000+ in tracked revenue in just over a month. One campaign alone delivered &#x20B9;1,39,344 in purchase value at 5.81x ROAS.</div>
+      <div class="cdesc">Turned &#x20B9;28,262 in ad spend into &#x20B9;1,52,000+ in tracked revenue in just over a month. One campaign alone delivered &#x20B9;1,39,344 in purchase value at 5.81x ROAS and &#x20B9;272 cost per purchase.</div>
       <div class="mrow">
         <div class="mb"><span class="mv">5.81x</span><span class="ml">ROAS achieved</span></div>
         <div class="mb"><span class="mv b">100</span><span class="ml">Purchases</span></div>
@@ -237,37 +283,32 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
       </div>
     </div>
     <div class="cd" id="case2-detail">
-      <div class="cd-inner">
-        <div class="qa-block">
-          <div class="qa-q">What was the problem?</div>
-          <div class="qa-a">Client had inconsistent ROAS — sometimes 2x, sometimes nothing. Budget was spread evenly without tracking which campaigns drove actual purchases. Cost per purchase was rising with no strategy to fix it.</div>
-        </div>
-        <div class="qa-block">
-          <div class="qa-q">What made this campaign different?</div>
-          <div class="qa-a">Focused 100% on ROAS, not vanity metrics. Deep audience research, data-backed creative testing, and daily CPA tracking. Budget only scaled when numbers justified it. Underperformers killed fast. Winners scaled confidently.</div>
-        </div>
-        <div class="dgrid">
-          <div class="dbox"><h4>Campaign Results</h4><ul><li>Ad Spend: &#x20B9;28,262</li><li>Revenue: &#x20B9;1,52,000+</li><li>Best Campaign: &#x20B9;1,39,344 value</li><li>ROAS: 5.81x</li><li>100 Purchases | 1.18L+ Reach</li></ul></div>
-          <div class="dbox"><h4>Strategy</h4><ul><li>Deep audience research before launch</li><li>Data-backed creative testing</li><li>Smart budget allocation by ROAS</li><li>Daily monitoring of CPA</li><li>Aligned ads with buying psychology</li></ul></div>
-        </div>
-        <div class="proof-section">
-          <div class="proof-title">Campaign Proof — Add Your Screenshots</div>
-          <div class="proof-grid">
-            <div class="proof-img">
-              <img src="REPLACE-WITH-YOUR-META-ROAS-URL" alt="Meta ROAS Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
-              <div class="ph"><div class="ph-icon">&#128200;</div><div class="ph-label">Meta ROAS Dashboard<br><strong>Upload to GitHub then send me Raw URL</strong></div></div>
-            </div>
-            <div class="proof-img">
-              <img src="REPLACE-WITH-YOUR-META-PURCHASE-URL" alt="Purchase Results" onload="imgLoaded(this)" onerror="imgError(this)">
-              <div class="ph"><div class="ph-icon">&#128722;</div><div class="ph-label">Purchase Campaign Results<br><strong>Upload to GitHub then send me Raw URL</strong></div></div>
-            </div>
+      <div class="qa">
+        <div class="qa-q">What was the problem?</div>
+        <div class="qa-a">Client had inconsistent ROAS — sometimes 2x, sometimes nothing. Budget was spread evenly without tracking which campaigns drove actual purchases. Cost per purchase was rising with no strategy to fix it.</div>
+      </div>
+      <div class="qa">
+        <div class="qa-q">What made this campaign different?</div>
+        <div class="qa-a">Focused 100% on ROAS, not vanity metrics. Deep audience research, data-backed creative testing, and daily CPA tracking. Budget only scaled when numbers justified it. Underperformers killed fast. Winners scaled confidently with buying psychology-aligned creatives.</div>
+      </div>
+      <div class="dgrid">
+        <div class="dbox"><h4>Campaign Results</h4><ul><li>Ad Spend: &#x20B9;28,262</li><li>Revenue: &#x20B9;1,52,000+</li><li>Best Campaign: &#x20B9;1,39,344 value</li><li>ROAS: 5.81x</li><li>100 Purchases | 1.18L+ Reach</li></ul></div>
+        <div class="dbox"><h4>Strategy</h4><ul><li>Deep audience research before launch</li><li>Data-backed creative testing</li><li>Smart budget allocation by ROAS</li><li>Daily monitoring of CPA</li><li>Scaled with buying psychology</li></ul></div>
+      </div>
+      <div class="proof-wrap">
+        <div class="proof-label">&#128247; Campaign Proof — Dashboard Screenshot</div>
+        <div class="proof-img-wrap">
+          <img id="img-case2" src="" alt="Meta ROAS Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
+          <div class="proof-placeholder" id="ph-case2">
+            <div class="pp-icon">&#128200;</div>
+            <div class="pp-text">Meta ROAS dashboard screenshot will appear here<br>See image URL section below to add yours</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- CASE 3 -->
+  <!-- CASE 3: REAL ESTATE -->
   <div class="cc" id="case3">
     <div class="cc-header">
       <div class="cc-top">
@@ -279,7 +320,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
         <button class="tog" id="btn-case3">Details &#8595;</button>
       </div>
       <div class="ctit">Real Estate Meta: 4,623+ Leads at &#x20B9;54/lead — &#x20B9;2.5L spend</div>
-      <div class="cdesc">Large-scale real estate lead generation. Generated 4,623+ qualified leads at &#x20B9;54 average CPL on &#x20B9;2,50,000+ spend — far below industry average of &#x20B9;120-300 per lead.</div>
+      <div class="cdesc">Large-scale real estate lead generation. 4,623+ qualified leads at &#x20B9;54 average CPL on &#x20B9;2,50,000+ spend — far below industry average of &#x20B9;120-300 per lead.</div>
       <div class="mrow">
         <div class="mb"><span class="mv">4,623+</span><span class="ml">Leads generated</span></div>
         <div class="mb"><span class="mv b">&#x20B9;54</span><span class="ml">Avg cost per lead</span></div>
@@ -287,37 +328,32 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
       </div>
     </div>
     <div class="cd" id="case3-detail">
-      <div class="cd-inner">
-        <div class="qa-block">
-          <div class="qa-q">Why do most real estate campaigns struggle?</div>
-          <div class="qa-a">Most developers fix poor results by increasing budget — but the real problem is structure. When targeting does not match buyer intent and creatives don't build trust, the algorithm has to guess your audience. That drives costs to &#x20B9;120-300 per lead.</div>
-        </div>
-        <div class="qa-block">
-          <div class="qa-q">What drove &#x20B9;54 CPL consistently?</div>
-          <div class="qa-a">Three things: (1) Targeting matched real buyer intent. (2) Creatives built aspiration and trust simultaneously. (3) Follow-up system designed to push leads toward site visits, not just form fills.</div>
-        </div>
-        <div class="dgrid">
-          <div class="dbox"><h4>Campaign Numbers</h4><ul><li>Total Spend: &#x20B9;2,50,000+</li><li>Leads: 4,623+</li><li>Avg CPL: &#x20B9;54</li><li>Industry avg: &#x20B9;120-300</li><li>60-80% below market CPL</li></ul></div>
-          <div class="dbox"><h4>Key Success Factors</h4><ul><li>Intent-based audience targeting</li><li>Aspirational + trust-building creatives</li><li>Site visit-focused follow-up system</li><li>Algorithm-friendly campaign structure</li><li>Continuous CPL optimization</li></ul></div>
-        </div>
-        <div class="proof-section">
-          <div class="proof-title">Campaign Proof — Add Your Screenshots</div>
-          <div class="proof-grid">
-            <div class="proof-img">
-              <img src="REPLACE-WITH-YOUR-REALESTATE-URL" alt="Real Estate Results" onload="imgLoaded(this)" onerror="imgError(this)">
-              <div class="ph"><div class="ph-icon">&#127968;</div><div class="ph-label">Real Estate Dashboard<br><strong>Upload to GitHub then send me Raw URL</strong></div></div>
-            </div>
-            <div class="proof-img">
-              <img src="REPLACE-WITH-YOUR-CPL-URL" alt="CPL Performance" onload="imgLoaded(this)" onerror="imgError(this)">
-              <div class="ph"><div class="ph-icon">&#128200;</div><div class="ph-label">CPL Performance<br><strong>Upload to GitHub then send me Raw URL</strong></div></div>
-            </div>
+      <div class="qa">
+        <div class="qa-q">Why do most real estate campaigns struggle?</div>
+        <div class="qa-a">Most developers fix poor results by increasing budget — but the real problem is structure. When targeting doesn't match buyer intent and creatives don't build trust, the algorithm has to guess your audience. That drives costs to &#x20B9;120-300 per lead.</div>
+      </div>
+      <div class="qa">
+        <div class="qa-q">What drove &#x20B9;54 CPL consistently?</div>
+        <div class="qa-a">Three things: (1) Targeting matched real buyer intent. (2) Creatives built aspiration and trust simultaneously. (3) Follow-up system designed to push leads toward site visits — not just form fills. Better inputs = better leads = more site visits = more sales.</div>
+      </div>
+      <div class="dgrid">
+        <div class="dbox"><h4>Campaign Numbers</h4><ul><li>Total Spend: &#x20B9;2,50,000+</li><li>Leads: 4,623+</li><li>Avg CPL: &#x20B9;54</li><li>Industry avg: &#x20B9;120-300</li><li>60-80% below market CPL</li></ul></div>
+        <div class="dbox"><h4>Key Success Factors</h4><ul><li>Intent-based audience targeting</li><li>Aspirational + trust-building creatives</li><li>Site visit-focused follow-up system</li><li>Algorithm-friendly campaign structure</li><li>No complicated funnels needed</li></ul></div>
+      </div>
+      <div class="proof-wrap">
+        <div class="proof-label">&#128247; Campaign Proof — Dashboard Screenshot</div>
+        <div class="proof-img-wrap">
+          <img id="img-case3" src="" alt="Real Estate Lead Gen" onload="imgLoaded(this)" onerror="imgError(this)">
+          <div class="proof-placeholder" id="ph-case3">
+            <div class="pp-icon">&#127968;</div>
+            <div class="pp-text">Real estate campaign screenshot will appear here<br>See image URL section below to add yours</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- CASE 4 -->
+  <!-- CASE 4: GOOGLE ADS -->
   <div class="cc" id="case4">
     <div class="cc-header">
       <div class="cc-top">
@@ -329,7 +365,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
         <button class="tog" id="btn-case4">Details &#8595;</button>
       </div>
       <div class="ctit">Google Ads: 733K clicks, 82.1M impressions, 35,700+ conversions</div>
-      <div class="cdesc">Full Google Ads management across Search, Shopping, Display and YouTube. App install CPI reduced from &#x20B9;6.71 to &#x20B9;1.90 (72% drop). YouTube views at &#x20B9;0.02 per view.</div>
+      <div class="cdesc">Full Google Ads management across Search, Shopping, Display and YouTube. App install CPI reduced from &#x20B9;6.71 to &#x20B9;1.90 — a 72% reduction. YouTube views at &#x20B9;0.02 per view.</div>
       <div class="mrow">
         <div class="mb"><span class="mv o">733K</span><span class="ml">Total clicks</span></div>
         <div class="mb"><span class="mv">35,700+</span><span class="ml">Conversions</span></div>
@@ -337,31 +373,30 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
       </div>
     </div>
     <div class="cd" id="case4-detail">
-      <div class="cd-inner">
-        <div class="dgrid">
-          <div class="dbox"><h4>Google Account Overview</h4><p>733K clicks | 82.1M impressions | &#x20B9;1.91M conversion value | 35,700+ conversions across Search, Shopping, Display and YouTube.</p></div>
-          <div class="dbox"><h4>App Install Campaign</h4><p>CPI cut from &#x20B9;6.71 to &#x20B9;1.90 — 72% reduction. 749 installs at &#x20B9;1,419.70 total cost. 74,111 impressions, 24.22% conversion rate.</p></div>
-          <div class="dbox"><h4>YouTube Campaign</h4><p>22.5K views at &#x20B9;0.02 per view on only &#x20B9;490 spend. 77.3K impressions. Extremely cost-efficient video campaign.</p></div>
-          <div class="dbox"><h4>UK Fashion Shopping</h4><p>GBP 5.87K spend | 92 conversions | GBP 21.8K conv value | 3.71x ROAS. Avg CPC GBP 0.61-0.76 over 5 months.</p></div>
-        </div>
-        <div class="proof-section">
-          <div class="proof-title">Add Your Google Ads Screenshots</div>
-          <div class="proof-grid">
-            <div class="proof-img">
-              <img src="REPLACE-WITH-YOUR-GOOGLE-URL-1" alt="Google Ads Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
-              <div class="ph"><div class="ph-icon" style="color:#ea5a40;opacity:1;font-weight:700">G</div><div class="ph-label">Google Ads Dashboard<br><strong>Upload to GitHub then send me Raw URL</strong></div></div>
-            </div>
-            <div class="proof-img">
-              <img src="REPLACE-WITH-YOUR-GOOGLE-URL-2" alt="Google Conversions" onload="imgLoaded(this)" onerror="imgError(this)">
-              <div class="ph"><div class="ph-icon" style="color:#ea5a40;opacity:1;font-weight:700">G</div><div class="ph-label">Conversion Results<br><strong>Upload to GitHub then send me Raw URL</strong></div></div>
-            </div>
+      <div class="qa">
+        <div class="qa-q">What campaigns were managed?</div>
+        <div class="qa-a">Full Google account across Search, Shopping, Display and YouTube campaigns. 733K total clicks, 82.1M impressions, and 35,700+ conversions across all campaign types managed over time.</div>
+      </div>
+      <div class="dgrid">
+        <div class="dbox"><h4>App Install Campaign</h4><p>CPI cut from &#x20B9;6.71 to &#x20B9;1.90 — 72% reduction. 749 installs at &#x20B9;1,419.70 total. 74,111 impressions, 24.22% conversion rate.</p></div>
+        <div class="dbox"><h4>YouTube Campaign</h4><p>22.5K views at &#x20B9;0.02/view on &#x20B9;490 spend only. 77.3K impressions. Extremely cost-efficient video reach on minimal budget.</p></div>
+        <div class="dbox"><h4>UK Fashion Shopping</h4><p>GBP 5.87K spend | 92 conversions | GBP 21.8K revenue | 3.71x ROAS. Avg CPC GBP 0.61-0.76 over 5 months Jan-May.</p></div>
+        <div class="dbox"><h4>Overall Account</h4><p>733K clicks | 82.1M impressions | &#x20B9;1.91M conversion value | 35,700+ conversions across all campaign types.</p></div>
+      </div>
+      <div class="proof-wrap">
+        <div class="proof-label">&#128247; Campaign Proof — Dashboard Screenshot</div>
+        <div class="proof-img-wrap">
+          <img id="img-case4" src="" alt="Google Ads Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
+          <div class="proof-placeholder" id="ph-case4">
+            <div class="pp-icon" style="color:#ea5a40;opacity:.6;font-size:28px;font-weight:700">G</div>
+            <div class="pp-text">Google Ads dashboard screenshot will appear here<br>See image URL section below to add yours</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- CASE 5 -->
+  <!-- CASE 5: LINKEDIN -->
   <div class="cc" id="case5">
     <div class="cc-header">
       <div class="cc-top">
@@ -373,7 +408,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
         <button class="tog" id="btn-case5">Details &#8595;</button>
       </div>
       <div class="ctit">LinkedIn Ads: B2B Lead Generation &amp; Account-Based Marketing</div>
-      <div class="cdesc">B2B LinkedIn campaigns using Matched Audiences, Lead Gen Forms and Sponsored Content. Targeted decision-makers by job title, company size and industry.</div>
+      <div class="cdesc">B2B campaigns using Matched Audiences, Lead Gen Forms and Sponsored Content. Targeted decision-makers by job title, company size and industry in competitive B2B markets.</div>
       <div class="mrow">
         <div class="mb"><span class="mv p">B2B</span><span class="ml">Lead generation</span></div>
         <div class="mb"><span class="mv b">ABM</span><span class="ml">Account-based targeting</span></div>
@@ -381,22 +416,21 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
       </div>
     </div>
     <div class="cd" id="case5-detail">
-      <div class="cd-inner">
-        <div class="dgrid">
-          <div class="dbox"><h4>LinkedIn Strategy</h4><p>Used Matched Audiences from CRM to retarget warm prospects. Lead Gen Forms for frictionless lead capture. Sponsored Content for cold ICP awareness.</p></div>
-          <div class="dbox"><h4>Targeting Approach</h4><p>Segmented by job title, seniority, company size and industry. Separate campaigns for cold, warm and retargeting — each with distinct messaging.</p></div>
-        </div>
-        <div class="proof-section">
-          <div class="proof-title">Add Your LinkedIn Ads Screenshots</div>
-          <div class="proof-grid">
-            <div class="proof-img">
-              <img src="REPLACE-WITH-YOUR-LINKEDIN-URL-1" alt="LinkedIn Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
-              <div class="ph"><div class="ph-icon" style="color:#0a66c2;opacity:1;font-weight:700">in</div><div class="ph-label">LinkedIn Campaign Manager<br><strong>Upload to GitHub then send me Raw URL</strong></div></div>
-            </div>
-            <div class="proof-img">
-              <img src="REPLACE-WITH-YOUR-LINKEDIN-URL-2" alt="LinkedIn Lead Results" onload="imgLoaded(this)" onerror="imgError(this)">
-              <div class="ph"><div class="ph-icon" style="color:#0a66c2;opacity:1;font-weight:700">in</div><div class="ph-label">Lead Gen Results<br><strong>Upload to GitHub then send me Raw URL</strong></div></div>
-            </div>
+      <div class="qa">
+        <div class="qa-q">What was the LinkedIn strategy?</div>
+        <div class="qa-a">Used Matched Audiences from CRM to retarget warm prospects. Lead Gen Forms for frictionless lead capture. Sponsored Content for cold ICP awareness. Three-tier audience funnel: cold, warm, and retargeting — each with distinct messaging and offers.</div>
+      </div>
+      <div class="dgrid">
+        <div class="dbox"><h4>Targeting Approach</h4><ul><li>Segmented by job title &amp; seniority</li><li>Filtered by company size and industry</li><li>CRM Matched Audiences for warm leads</li><li>Lookalike audiences for cold scaling</li></ul></div>
+        <div class="dbox"><h4>Campaign Types</h4><ul><li>Sponsored Content — awareness</li><li>Lead Gen Forms — conversions</li><li>Message Ads — direct outreach</li><li>Retargeting — warm prospects</li></ul></div>
+      </div>
+      <div class="proof-wrap">
+        <div class="proof-label">&#128247; Campaign Proof — Dashboard Screenshot</div>
+        <div class="proof-img-wrap">
+          <img id="img-case5" src="" alt="LinkedIn Ads Dashboard" onload="imgLoaded(this)" onerror="imgError(this)">
+          <div class="proof-placeholder" id="ph-case5">
+            <div class="pp-icon" style="color:#0a66c2;opacity:.6;font-size:28px;font-weight:700">in</div>
+            <div class="pp-text">LinkedIn Ads dashboard screenshot will appear here<br>See image URL section below to add yours</div>
           </div>
         </div>
       </div>
@@ -405,6 +439,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
 
 </section>
 
+<!-- CLIENTS -->
 <section id="clients" class="sec">
   <div class="sec-title"><div class="sico ig">&#127758;</div>Clients — International &amp; National</div>
   <div class="cligrid">
@@ -423,6 +458,7 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="sec">
   <div class="sec-title"><div class="sico io">&#9889;</div>Skills &amp; Channel Expertise</div>
   <div class="chgrid">
@@ -440,77 +476,173 @@ h1{font-family:var(--fh);font-size:clamp(24px,3.5vw,38px);font-weight:700;line-h
   </div>
 </section>
 
+<!-- CERTIFICATIONS - clickable with links -->
 <section class="sec">
   <div class="sec-title"><div class="sico ip">&#127942;</div>Certifications</div>
   <div class="certwrap">
-    <div class="cert"><div class="certdot" style="background:#ea5a40"></div>Google Ads Certified</div>
-    <div class="cert"><div class="certdot" style="background:#1877f2"></div>Meta Blueprint</div>
-    <div class="cert"><div class="certdot" style="background:#0a66c2"></div>LinkedIn Marketing Labs</div>
-    <div class="cert"><div class="certdot" style="background:#fbbc05"></div>Google Analytics 4</div>
-    <div class="cert"><div class="certdot" style="background:#ff7a59"></div>HubSpot Marketing</div>
+    <!-- EDIT: Replace # with your actual certification URL -->
+    <a href="https://skillshop.credential.net/" target="_blank" class="cert-link">
+      <div class="certdot" style="background:#ea5a40"></div>Google Ads Certified<span class="cert-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.facebook.com/business/learn/certification" target="_blank" class="cert-link">
+      <div class="certdot" style="background:#1877f2"></div>Meta Blueprint<span class="cert-arrow">&#8599;</span>
+    </a>
+    <a href="https://www.linkedin.com/learning/certificate" target="_blank" class="cert-link">
+      <div class="certdot" style="background:#0a66c2"></div>LinkedIn Marketing Labs<span class="cert-arrow">&#8599;</span>
+    </a>
+    <a href="https://analytics.google.com/analytics/academy/" target="_blank" class="cert-link">
+      <div class="certdot" style="background:#fbbc05"></div>Google Analytics 4<span class="cert-arrow">&#8599;</span>
+    </a>
+    <a href="https://academy.hubspot.com/" target="_blank" class="cert-link">
+      <div class="certdot" style="background:#ff7a59"></div>HubSpot Marketing<span class="cert-arrow">&#8599;</span>
+    </a>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="sec">
   <div class="contact-box">
-    <h2>Let's work together</h2>
-    <p>Open to full-time roles, freelance projects &amp; consulting.<br>Based in India — available remote &amp; on-site.</p>
-    <div class="cbtns">
-      <a href="mailto:abhisheklakhanpal13@gmail.com" class="btn btn-p">Send Email</a>
-      <a href="https://wa.me/918375994314" target="_blank" class="btn btn-s">WhatsApp</a>
-      <a href="https://www.linkedin.com/in/abhishekdr13/" target="_blank" class="btn btn-s">LinkedIn</a>
+    <div class="contact-top">
+      <h2>Let's work together</h2>
+      <p>Open to full-time roles, freelance projects &amp; consulting.<br>Based in India — available remote &amp; on-site.</p>
+      <div class="cbtns">
+        <a href="mailto:abhisheklakhanpal13@gmail.com" class="btn btn-p">Send Email</a>
+        <a href="https://wa.me/918375994314" target="_blank" class="btn btn-s">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/abhishekdr13/" target="_blank" class="btn btn-s">LinkedIn</a>
+      </div>
+      <div class="cinfo">
+        <a href="tel:+918375994314">+91 83 759 94314</a>
+        <a href="mailto:abhisheklakhanpal13@gmail.com">abhisheklakhanpal13@gmail.com</a>
+      </div>
     </div>
-    <div class="cinfo">
-      <a href="tel:+918375994314">+91 83 759 94314</a>
-      <a href="mailto:abhisheklakhanpal13@gmail.com">abhisheklakhanpal13@gmail.com</a>
+
+    <div class="divider"><div class="divider-line"></div><div class="divider-text">or send a message</div><div class="divider-line"></div></div>
+
+    <!-- CONTACT FORM -->
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Rahul Sharma" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="rahul@company.com" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 98765 43210">
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Meta Ads Management</option>
+            <option>Google Ads Management</option>
+            <option>LinkedIn Ads Management</option>
+            <option>Full Performance Marketing</option>
+            <option>Consulting / Audit</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group form-full">
+          <label>Your Message</label>
+          <textarea placeholder="Tell me about your business, budget, and goals..."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">Send Message &#8594;</button>
+    </form>
+    <div class="form-success" id="formSuccess">
+      &#10003; Message sent! I will get back to you within 24 hours.
     </div>
+
+    <div class="divider"><div class="divider-line"></div><div class="divider-text">or schedule a call</div><div class="divider-line"></div></div>
+
+    <!-- SCHEDULE MEETING -->
+    <div class="schedule-box">
+      <h4>&#128197; Schedule a Free 30-min Strategy Call</h4>
+      <p>Let's discuss your campaigns, goals, and how I can help grow your business.</p>
+      <!-- EDIT: Replace the href with your Calendly link e.g. https://calendly.com/yourname -->
+      <a href="https://calendly.com" target="_blank" class="schedule-btn">
+        &#128197; Book a Call on Calendly
+      </a>
+    </div>
+
   </div>
 </section>
 
 </div>
 
+<!--
+=======================================================
+  IMAGE URLS - EDIT HERE (NO CODING NEEDED)
+  
+  To add your screenshots:
+  1. Upload image to your GitHub repo
+  2. Click the image file → click Raw button
+  3. Copy the URL
+  4. Replace the empty "" below with your URL
+  5. Save and upload to GitHub
+=======================================================
+-->
 <script>
-(function(){
-  function openCase(id){
-    var card = document.getElementById(id);
-    var detail = document.getElementById(id + "-detail");
-    var btn = document.getElementById("btn-" + id);
-    if(!card || !detail) return;
-    var isOpen = card.classList.contains("open");
-    var allCards = document.querySelectorAll(".cc");
-    var allDetails = document.querySelectorAll(".cd");
-    var allBtns = document.querySelectorAll(".tog");
-    for(var i=0;i<allCards.length;i++) allCards[i].classList.remove("open");
-    for(var i=0;i<allDetails.length;i++) allDetails[i].classList.remove("open");
-    for(var i=0;i<allBtns.length;i++) allBtns[i].innerHTML = "Details &#8595;";
-    if(!isOpen){
-      card.classList.add("open");
-      detail.classList.add("open");
-      btn.innerHTML = "Close &#8593;";
+var IMAGE_URLS = {
+  case1: "https://raw.githubusercontent.com/abhisheksharmadr13/portfolio/main/meta%20ads%201.jpeg",
+  case2: "",
+  case3: "",
+  case4: "",
+  case5: ""
+};
+
+window.onload = function() {
+  var ids = ["case1","case2","case3","case4","case5"];
+  for(var i=0;i<ids.length;i++){
+    var id = ids[i];
+    var url = IMAGE_URLS[id];
+    if(url && url.length > 5){
+      var img = document.getElementById("img-" + id);
+      if(img){ img.src = url; }
     }
   }
 
-  var ids = ["case1","case2","case3","case4","case5"];
-  for(var i=0;i<ids.length;i++){
-    (function(id){
-      var card = document.getElementById(id);
-      if(card){
-        var header = card.querySelector(".cc-header");
-        if(header){
-          header.addEventListener("click", function(){ openCase(id); });
+  var headers = document.querySelectorAll(".cc-header");
+  for(var j=0;j<headers.length;j++){
+    (function(h){
+      h.addEventListener("click", function(){
+        var card = h.parentElement;
+        var id = card.id;
+        var detail = document.getElementById(id+"-detail");
+        var btn = document.getElementById("btn-"+id);
+        var isOpen = card.classList.contains("open");
+        var allCards = document.querySelectorAll(".cc");
+        var allDetails = document.querySelectorAll(".cd");
+        var allBtns = document.querySelectorAll(".tog");
+        for(var k=0;k<allCards.length;k++) allCards[k].classList.remove("open");
+        for(var k=0;k<allDetails.length;k++) allDetails[k].classList.remove("open");
+        for(var k=0;k<allBtns.length;k++) allBtns[k].innerHTML = "Details &#8595;";
+        if(!isOpen && detail){
+          card.classList.add("open");
+          detail.classList.add("open");
+          if(btn) btn.innerHTML = "Close &#8593;";
         }
-      }
-    })(ids[i]);
+      });
+    })(headers[j]);
   }
-})();
+};
 
 function imgLoaded(img){
   img.classList.add("loaded");
-  var ph = img.nextElementSibling;
-  if(ph){ ph.classList.add("hidden"); }
+  var id = img.id.replace("img-","");
+  var ph = document.getElementById("ph-"+id);
+  if(ph) ph.classList.add("hidden");
 }
 function imgError(img){
   img.style.display = "none";
+}
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById("contactForm").style.display = "none";
+  document.getElementById("formSuccess").style.display = "block";
 }
 </script>
 </body>
